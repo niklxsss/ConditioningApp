@@ -80,7 +80,6 @@
 		F498478229F01BD300903C4F /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		F4B8A5FC29F7D51B00AB9601 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F4B8A60629F8190B00AB9601 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F4B8A60829F8212C00AB9601 /* StartTimerIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTimerIntent.swift; sourceTree = "<group>"; };
 		F4B8C9A029FEFDC7005995AA /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		F4B8C9A229FFCE9A005995AA /* ShortCutKonditionierung.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShortCutKonditionierung.entitlements; sourceTree = "<group>"; };
 		F4B8C9A329FFCFAC005995AA /* ShortCutKonditionierungRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShortCutKonditionierungRelease.entitlements; sourceTree = "<group>"; };
@@ -148,14 +147,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		F4B8A60729F8210C00AB9601 /* Intents */ = {
-			isa = PBXGroup;
-			children = (
-				F4B8A60829F8212C00AB9601 /* StartTimerIntent.swift */,
-			);
-			path = Intents;
-			sourceTree = "<group>";
-		};
 		F4B9B34929EFF52C002E34FD = {
 			isa = PBXGroup;
 			children = (
@@ -186,7 +177,6 @@
 			children = (
 				F4B8C9A329FFCFAC005995AA /* ShortCutKonditionierungRelease.entitlements */,
 				F4B8C9A229FFCE9A005995AA /* ShortCutKonditionierung.entitlements */,
-				F4B8A60729F8210C00AB9601 /* Intents */,
 				F498477F29F01B2200903C4F /* Views */,
 				F498477E29F01B0A00903C4F /* NavBar */,
 				F49666EE29EFF6D800D8E433 /* MyApp.swift */,
