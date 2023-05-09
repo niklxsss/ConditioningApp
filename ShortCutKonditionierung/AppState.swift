@@ -15,5 +15,5 @@ public class AppState: ObservableObject {
 public enum ShortcutType {
     case sayHello
     case catchABreath
-    case shockingPictures
+    case shockPicture
 }

@@ -25,11 +25,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 case is CatchABreathIntent:
                     print("Handling CatchABreathIntent")
                     openShortCutIntent(.catchABreath)
-                    return IntentHandler()
+                    return true
                     
                 case is ShockingPicturesIntent:
                     print("Handling ShockingPicturesIntent")
-                    openShortCutIntent(.shockingPictures)
+                    openShortCutIntent(.shockPicture)
                     return IntentHandler()
                     
                 default:
