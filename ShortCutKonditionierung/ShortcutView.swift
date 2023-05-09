@@ -6,20 +6,19 @@ struct ShortcutView: View {
     @State var selectedTab: Tabs = .home
     @EnvironmentObject private var appState: AppState
     
+    @State private var originalAppURL: URL? = URL(string: "your-app-scheme://")
+    
 
     var body: some View {
         NavigationView {
         VStack {
-            
-            //Text("App: \(appName)")
+        
             Text("App")
                 .font(.title)
                 .padding()
             
             Spacer()
             
-            if appState.showShortcutView == true {
-                
                 if appState.selectedShortcut == .sayHello {
                     Text("Hello")
                         .font(.largeTitle)
@@ -32,16 +31,12 @@ struct ShortcutView: View {
                 // je nach dem welcher Shortcut ausgeführt wird -> entprechende View darstellen
                 
                 //
-                
-                /*Button("Öffne App") {
-                    if let url = URL(string: appState.originalAppURLScheme) {
-                        UIApplication.shared.open(url)
-                        
-                    }
-                }*/
-            }
+            
+            Spacer()
             
             HStack{
+                CountdownButtonView(originalAppURL: $originalAppURL, timerDuration: 10)
+                                .padding()
                 
                 Spacer()
                 
@@ -53,26 +48,19 @@ struct ShortcutView: View {
                     .foregroundColor(.black)
                     .clipShape(Circle())
                     .frame(width: 40, height: 24)
+                    
+                }
+                .padding(.bottom, 10)
             }
-            .padding(.bottom, 10)}
-            
+            }
+                    
         }
         .navigationBarTitle(Text("shortcut"), displayMode: .inline)
         .edgesIgnoringSafeArea(.bottom)
         .padding()
         }
-    }
-    
-    func openOriginalApp() {
-           if let urlScheme = appState.originalAppURLScheme, let url = URL(string: urlScheme) {
-               UIApplication.shared.open(url, options: [:]) { success in
-                   if !success {
-                       print("Error: could not open the original app")
-                   }
-               }
-           }
-       }
 }
+
 
 struct ShortcutView_Previews: PreviewProvider {
     static var previews: some View {
