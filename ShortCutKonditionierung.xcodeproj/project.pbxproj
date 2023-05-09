@@ -12,7 +12,6 @@
 		F43453952A026EED00EFBCB8 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = F4B8C9A029FEFDC7005995AA /* Intents.intentdefinition */; };
 		F43453962A026EF400EFBCB8 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = F4B8C9A029FEFDC7005995AA /* Intents.intentdefinition */; };
 		F4947D6C2A0A404200F72301 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED7A1629FFFEFF004B2FF2 /* IntentHandler.swift */; };
-		F4947D6E2A0A45BF00F72301 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4947D6D2A0A45BF00F72301 /* SceneDelegate.swift */; };
 		F49666ED29EFF6C900D8E433 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49666EC29EFF6C900D8E433 /* HomeView.swift */; };
 		F49666EF29EFF6D800D8E433 /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49666EE29EFF6D800D8E433 /* MyApp.swift */; };
 		F49666F129EFF6EC00D8E433 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49666F029EFF6EC00D8E433 /* NavigationBar.swift */; };
@@ -71,7 +70,6 @@
 
 /* Begin PBXFileReference section */
 		F4947CF02A094E6A00F72301 /* MyIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyIntents.entitlements; sourceTree = "<group>"; };
-		F4947D6D2A0A45BF00F72301 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F49666EB29EFF6C900D8E433 /* ShortCutKonditionierung-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShortCutKonditionierung-Bridging-Header.h"; sourceTree = "<group>"; };
 		F49666EC29EFF6C900D8E433 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F49666EE29EFF6D800D8E433 /* MyApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyApp.swift; sourceTree = "<group>"; };
@@ -177,7 +175,6 @@
 				F4B8A5FC29F7D51B00AB9601 /* ContentView.swift */,
 				F49666F029EFF6EC00D8E433 /* NavigationBar.swift */,
 				F498477C29F0184100903C4F /* CustomNavBarButton.swift */,
-				F4947D6D2A0A45BF00F72301 /* SceneDelegate.swift */,
 				F4B9B35929EFF52E002E34FD /* Assets.xcassets */,
 				F4B8A60629F8190B00AB9601 /* Info.plist */,
 				F4B9B35B29EFF52E002E34FD /* Preview Content */,
@@ -404,7 +401,6 @@
 				F498478329F01BD300903C4F /* StatisticsView.swift in Sources */,
 				F498478129F01B5F00903C4F /* SettingsView.swift in Sources */,
 				F49666EF29EFF6D800D8E433 /* MyApp.swift in Sources */,
-				F4947D6E2A0A45BF00F72301 /* SceneDelegate.swift in Sources */,
 				F4ED7A382A00F2C0004B2FF2 /* AppState.swift in Sources */,
 				F42BE9CA2A0154F0006EC08E /* IntentHandler.swift in Sources */,
 				F43453952A026EED00EFBCB8 /* Intents.intentdefinition in Sources */,

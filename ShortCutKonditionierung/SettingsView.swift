@@ -55,33 +55,3 @@ struct SettingsView_Previews: PreviewProvider {
     }
 }
 
-
-
-
-/*
-struct SettingsView: View {
-    
-    @Binding private var selectedTab: Tabs
-        
-        init(selectedTab: Binding<Tabs>) {
-            _selectedTab = selectedTab
-        }
-        
-        var body: some View {
-            VStack {
-                HStack{
-                    Text("settings")
-                    .font(.largeTitle)
-                    .padding()
-                    
-                    Spacer()
-                }
-                
-                Spacer()
-                
-                NavigationBar(selectedTab: $selectedTab)
-                
-            }
-            .navigationBarHidden(true)
-        }
-}*/
