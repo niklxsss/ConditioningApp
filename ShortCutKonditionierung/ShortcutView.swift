@@ -1,6 +1,6 @@
 import SwiftUI
 
-// Ansicht für die Shortcut-Ansicht
+
 struct ShortcutView: View {
     
     @State var selectedTab: Tabs = .home
@@ -18,24 +18,28 @@ struct ShortcutView: View {
             
             Spacer()
             
-            if appState.selectedShortcut == .sayHello {
-                                Text("Hello")
-                                    .font(.largeTitle)
-                                    .foregroundColor(.blue)
-                            }
-            if let originalAppURLScheme = appState.originalAppURLScheme {
-                            Button("Öffne ursprüngliche App") {
-                                if let url = URL(string: originalAppURLScheme) {
-                                    UIApplication.shared.open(url)
-                                }
-                            }
-                        }
-
-            
-            // verschiedene Subviews pro Shortcut Intent anlegen
-            // je nach dem welcher Shortcut ausgeführt wird -> entprechende View darstellen
-            
-            //
+            if appState.showShortcutView == true {
+                
+                if appState.selectedShortcut == .sayHello {
+                    Text("Hello")
+                        .font(.largeTitle)
+                        .foregroundColor(.blue)
+                    
+                }
+                
+                
+                // verschiedene Subviews pro Shortcut Intent anlegen
+                // je nach dem welcher Shortcut ausgeführt wird -> entprechende View darstellen
+                
+                //
+                
+                /*Button("Öffne App") {
+                    if let url = URL(string: appState.originalAppURLScheme) {
+                        UIApplication.shared.open(url)
+                        
+                    }
+                }*/
+            }
             
             HStack{
                 

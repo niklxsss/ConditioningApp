@@ -19,6 +19,8 @@
 	<array>
 		<string>OpenAppIntent</string>
 		<string>SayHelloIntent</string>
+		<string>CatchABreathIntent</string>
+		<string>ShockingPicturesIntent</string>
 	</array>
 	<key>MinimumOSVersion</key>
 	<string>$(IPHONEOS_DEPLOYMENT_TARGET)</string>
@@ -42,15 +44,15 @@
 	</dict>
 	<key>NSUserActivityTypes</key>
 	<array>
+		<string>CatchABreathIntent</string>
 		<string>OpenAppIntent</string>
 		<string>SayHelloIntent</string>
+		<string>ShockingPicturesIntent</string>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>
 		<string>processing</string>
 	</array>
-    
-    
 </dict>
 </plist>

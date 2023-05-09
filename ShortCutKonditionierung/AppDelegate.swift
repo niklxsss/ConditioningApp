@@ -19,12 +19,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 switch intent {
                 case is SayHelloIntent:
                     print("Handling SayHelloIntent")
-                    handleOpenShortCutIntent(.sayHello)
+                    openShortCutIntent(.sayHello)
+                    return IntentHandler()
+                
+                case is CatchABreathIntent:
+                    print("Handling CatchABreathIntent")
+                    openShortCutIntent(.catchABreath)
                     return IntentHandler()
                     
-                case is OpenAppIntent:
-                    print("Handling 'OpenApp'Intent")
-                    return true
+                case is ShockingPicturesIntent:
+                    print("Handling ShockingPicturesIntent")
+                    openShortCutIntent(.shockingPictures)
+                    return IntentHandler()
                     
                 default:
                     return nil
@@ -38,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return false
     }
 
-    func handleOpenShortCutIntent(_ shortcut: ShortcutType) {
+    func openShortCutIntent(_ shortcut: ShortcutType) {
         DispatchQueue.main.async {
             self.appState.showShortcutView = true
             self.appState.selectedShortcut = shortcut
