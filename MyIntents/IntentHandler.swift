@@ -2,6 +2,8 @@ import Intents
 
 class IntentHandler: INExtension, SayHelloIntentHandling {
     
+    
+    
     override func handler(for intent: INIntent) -> Any {
         if intent is SayHelloIntent {
             return self
@@ -10,10 +12,17 @@ class IntentHandler: INExtension, SayHelloIntentHandling {
         return self
     }
     
-    func handle(intent: SayHelloIntent, completion: @escaping (SayHelloIntentResponse) -> Void) {
+    /*func handle(intent: SayHelloIntent, completion: @escaping (SayHelloIntentResponse) -> Void) {
         print("Received SayHelloIntent")
         completion(SayHelloIntentResponse(code: .success, userActivity: nil))
+    }*/
+    
+    func handle(intent: SayHelloIntent, completion: @escaping (SayHelloIntentResponse) -> Void) {
+        let userActivity = NSUserActivity(activityType: "testAppios.ShortCutKonditionierung")
+        completion(SayHelloIntentResponse(code: .success, userActivity: userActivity))
     }
+
+
     
 }
 

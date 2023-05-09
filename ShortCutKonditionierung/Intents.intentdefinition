@@ -18,7 +18,7 @@
 	<array>
 		<dict>
 			<key>INIntentCategory</key>
-			<string>information</string>
+			<string>generic</string>
 			<key>INIntentConfigurable</key>
 			<true/>
 			<key>INIntentDescriptionID</key>
@@ -70,23 +70,6 @@
 				</array>
 				<key>INIntentResponseLastParameterTag</key>
 				<integer>5</integer>
-				<key>INIntentResponseParameters</key>
-				<array>
-					<dict>
-						<key>INIntentResponseParameterDisplayName</key>
-						<string>Property</string>
-						<key>INIntentResponseParameterDisplayNameID</key>
-						<string>wTAkwx</string>
-						<key>INIntentResponseParameterDisplayPriority</key>
-						<integer>1</integer>
-						<key>INIntentResponseParameterName</key>
-						<string>property</string>
-						<key>INIntentResponseParameterTag</key>
-						<integer>5</integer>
-						<key>INIntentResponseParameterType</key>
-						<string>URL</string>
-					</dict>
-				</array>
 			</dict>
 			<key>INIntentTitle</key>
 			<string>SayHelloIntent</string>
@@ -95,7 +78,7 @@
 			<key>INIntentType</key>
 			<string>Custom</string>
 			<key>INIntentVerb</key>
-			<string>View</string>
+			<string>Do</string>
 		</dict>
 		<dict>
 			<key>INIntentCategory</key>

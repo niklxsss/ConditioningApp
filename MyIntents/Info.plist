@@ -2,17 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSSiriUsageDescription</key>
-	<string>needed for c</string>
-	<key>NSAppleEventsUsageDescription</key>
-	<string>needed</string>
-	<key>INIntentDefinitionNamespace</key>
-	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
-	<key>IntentsSupported</key>
-	<array>
-		<string>OpenAppIntent</string>
-		<string>SayHelloIntent</string>
-	</array>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionAttributes</key>

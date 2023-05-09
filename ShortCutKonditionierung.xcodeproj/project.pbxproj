@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		F42BE9CA2A0154F0006EC08E /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED7A1629FFFEFF004B2FF2 /* IntentHandler.swift */; };
-		F42BE9CD2A015513006EC08E /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED7A1629FFFEFF004B2FF2 /* IntentHandler.swift */; };
 		F43453922A026CB800EFBCB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED7A3A2A00FB57004B2FF2 /* AppDelegate.swift */; };
 		F43453952A026EED00EFBCB8 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = F4B8C9A029FEFDC7005995AA /* Intents.intentdefinition */; };
 		F43453962A026EF400EFBCB8 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = F4B8C9A029FEFDC7005995AA /* Intents.intentdefinition */; };
+		F4947D6C2A0A404200F72301 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED7A1629FFFEFF004B2FF2 /* IntentHandler.swift */; };
+		F4947D6E2A0A45BF00F72301 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4947D6D2A0A45BF00F72301 /* SceneDelegate.swift */; };
 		F49666ED29EFF6C900D8E433 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49666EC29EFF6C900D8E433 /* HomeView.swift */; };
 		F49666EF29EFF6D800D8E433 /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49666EE29EFF6D800D8E433 /* MyApp.swift */; };
 		F49666F129EFF6EC00D8E433 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49666F029EFF6EC00D8E433 /* NavigationBar.swift */; };
@@ -70,6 +71,7 @@
 
 /* Begin PBXFileReference section */
 		F4947CF02A094E6A00F72301 /* MyIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyIntents.entitlements; sourceTree = "<group>"; };
+		F4947D6D2A0A45BF00F72301 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F49666EB29EFF6C900D8E433 /* ShortCutKonditionierung-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShortCutKonditionierung-Bridging-Header.h"; sourceTree = "<group>"; };
 		F49666EC29EFF6C900D8E433 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F49666EE29EFF6D800D8E433 /* MyApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyApp.swift; sourceTree = "<group>"; };
@@ -93,7 +95,7 @@
 		F4B9B37229EFF52E002E34FD /* ShortCutKonditionierungUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortCutKonditionierungUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F4CA3D7829FFD5FB00A75A4C /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		F4CA3D8329FFD5FB00A75A4C /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
-		F4ED7A1629FFFEFF004B2FF2 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		F4ED7A1629FFFEFF004B2FF2 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IntentHandler.swift; path = ../MyIntents/IntentHandler.swift; sourceTree = "<group>"; };
 		F4ED7A372A00F2C0004B2FF2 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		F4ED7A3A2A00FB57004B2FF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4ED7A472A0124E6004B2FF2 /* MyIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,28 +135,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F498477E29F01B0A00903C4F /* NavBar */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NavBar;
-			sourceTree = "<group>";
-		};
-		F498477F29F01B2200903C4F /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		F4B9B34929EFF52C002E34FD = {
 			isa = PBXGroup;
 			children = (
+				F4ED7A492A0124E6004B2FF2 /* MyIntents */,
 				F4ED7A422A01242C004B2FF2 /* storage */,
 				F4B9B35429EFF52C002E34FD /* ShortCutKonditionierung */,
 				F4B9B36529EFF52E002E34FD /* ShortCutKonditionierungTests */,
 				F4B9B36F29EFF52E002E34FD /* ShortCutKonditionierungUITests */,
-				F4ED7A492A0124E6004B2FF2 /* MyIntents */,
 				F4B9B35329EFF52C002E34FD /* Products */,
 				F49666EB29EFF6C900D8E433 /* ShortCutKonditionierung-Bridging-Header.h */,
 				F4CA3D7229FFD0B600A75A4C /* Frameworks */,
@@ -177,8 +165,8 @@
 			children = (
 				F4B8C9A329FFCFAC005995AA /* ShortCutKonditionierungRelease.entitlements */,
 				F4B8C9A229FFCE9A005995AA /* ShortCutKonditionierung.entitlements */,
-				F498477F29F01B2200903C4F /* Views */,
-				F498477E29F01B0A00903C4F /* NavBar */,
+				F4ED7A1629FFFEFF004B2FF2 /* IntentHandler.swift */,
+				F4B8C9A029FEFDC7005995AA /* Intents.intentdefinition */,
 				F49666EE29EFF6D800D8E433 /* MyApp.swift */,
 				F4ED7A3A2A00FB57004B2FF2 /* AppDelegate.swift */,
 				F4ED7A372A00F2C0004B2FF2 /* AppState.swift */,
@@ -189,6 +177,7 @@
 				F4B8A5FC29F7D51B00AB9601 /* ContentView.swift */,
 				F49666F029EFF6EC00D8E433 /* NavigationBar.swift */,
 				F498477C29F0184100903C4F /* CustomNavBarButton.swift */,
+				F4947D6D2A0A45BF00F72301 /* SceneDelegate.swift */,
 				F4B9B35929EFF52E002E34FD /* Assets.xcassets */,
 				F4B8A60629F8190B00AB9601 /* Info.plist */,
 				F4B9B35B29EFF52E002E34FD /* Preview Content */,
@@ -241,8 +230,6 @@
 			isa = PBXGroup;
 			children = (
 				F4947CF02A094E6A00F72301 /* MyIntents.entitlements */,
-				F4ED7A1629FFFEFF004B2FF2 /* IntentHandler.swift */,
-				F4B8C9A029FEFDC7005995AA /* Intents.intentdefinition */,
 				F4ED7A4C2A0124E6004B2FF2 /* Info.plist */,
 			);
 			path = MyIntents;
@@ -417,6 +404,7 @@
 				F498478329F01BD300903C4F /* StatisticsView.swift in Sources */,
 				F498478129F01B5F00903C4F /* SettingsView.swift in Sources */,
 				F49666EF29EFF6D800D8E433 /* MyApp.swift in Sources */,
+				F4947D6E2A0A45BF00F72301 /* SceneDelegate.swift in Sources */,
 				F4ED7A382A00F2C0004B2FF2 /* AppState.swift in Sources */,
 				F42BE9CA2A0154F0006EC08E /* IntentHandler.swift in Sources */,
 				F43453952A026EED00EFBCB8 /* Intents.intentdefinition in Sources */,
@@ -447,7 +435,7 @@
 			files = (
 				F43453922A026CB800EFBCB8 /* AppDelegate.swift in Sources */,
 				F43453962A026EF400EFBCB8 /* Intents.intentdefinition in Sources */,
-				F42BE9CD2A015513006EC08E /* IntentHandler.swift in Sources */,
+				F4947D6C2A0A404200F72301 /* IntentHandler.swift in Sources */,
 				F4D23E042A026FE800670EA1 /* AppState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -606,7 +594,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ShortCutKonditionierung/Info.plist;
-				INFOPLIST_KEY_NSSiriUsageDescription = "needs for controlling";
+				INFOPLIST_KEY_NSSiriUsageDescription = "needed ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -645,7 +633,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ShortCutKonditionierung/Info.plist;
-				INFOPLIST_KEY_NSSiriUsageDescription = "needs for controlling";
+				INFOPLIST_KEY_NSSiriUsageDescription = "needed ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -778,8 +766,9 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyIntents/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MyIntents;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = needed;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSSiriUsageDescription = "needs for controlling";
+				INFOPLIST_KEY_NSSiriUsageDescription = "needed for c";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -805,8 +794,9 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyIntents/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MyIntents;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = needed;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSSiriUsageDescription = "needs for controlling";
+				INFOPLIST_KEY_NSSiriUsageDescription = "needed for c";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
