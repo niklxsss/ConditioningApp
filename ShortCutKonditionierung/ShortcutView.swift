@@ -3,7 +3,7 @@ import SwiftUI
 
 struct ShortcutView: View {
     
-    @State var selectedTab: Tabs = .home
+    @State private var selectedTab: Tabs = .home
     @State private var originalAppURL: URL? = URL(string: "dummyurl://")
     @State private var breathAnimationScale: CGFloat = 1.0
     
@@ -91,10 +91,10 @@ struct ShortcutView: View {
         Group {
             VStack{
             if let randomImage = settings.selectedImages.randomElement() {
-                Text("image")
                 Image(randomImage)
                     .resizable()
-                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 350, height: 350)
+                    .cornerRadius(10)
             } else {
                 Text("No image selected")
             }

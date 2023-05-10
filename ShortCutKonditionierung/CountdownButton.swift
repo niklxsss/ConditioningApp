@@ -20,7 +20,7 @@ struct CountdownButton: View {
         Button(action: {
             openOriginalApp()
         }) {
-            Text("Öffne App (\(timeRemaining))")
+            Text("open app (\(timeRemaining))")
                 .frame(maxWidth: .infinity)
                 .padding()
                 .background(buttonEnabled || timerCompleted ? Color.blue : Color.gray)

@@ -11,7 +11,13 @@ class Settings: ObservableObject {
         }
     }
 
-    @Published var selectedImages: [String]
+    @Published var selectedImages: [String] {
+        didSet {
+            saveSelectedImages()
+            updateSelectedImages()
+        }
+    }
+
     @Published var allImages: [String] {
         didSet {
             saveAllImages()
@@ -33,9 +39,7 @@ class Settings: ObservableObject {
            let decodedImages = try? JSONDecoder().decode([String].self, from: data) {
             self.allImages = decodedImages
         } else {
-            // Hier können Sie die anfängliche Liste aller Bilder angebe
-            
-            self.allImages = ["Images/rot.jpeg","Images/rot.jpeg","Images/rot.jpeg"]
+            self.allImages = ["rot","rot2","rot1"]
         }
         
         updateSelectedImages()

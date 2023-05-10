@@ -60,31 +60,6 @@ struct BreatheSettingsView: View {
     }
 }
 
-/*struct ShockPictureSettingsView: View {
-    @EnvironmentObject var settings: Settings
-    
-    var body: some View {
-        List {
-            ForEach(settings.images, id: \.self) { image in
-                HStack {
-                    Text(image)
-                    Spacer()
-                    Toggle("", isOn: Binding(
-                        get: { self.settings.selectedImages.contains(image) },
-                        set: { isSelected in
-                            if isSelected {
-                                self.settings.selectedImages.append(image)
-                            } else {
-                                self.settings.selectedImages.removeAll { $0 == image }
-                            }
-                        }
-                    ))
-                }
-            }
-        }
-        .navigationBarTitle(Text("Shock Pictures"))
-    }
-}*/
 struct ShockPictureSettingsView: View {
     @EnvironmentObject var settings: Settings
     
@@ -95,6 +70,7 @@ struct ShockPictureSettingsView: View {
                     Image(image)
                         .resizable()
                         .frame(width: 50, height: 50)
+                        .cornerRadius(5)
                     
                     Text(image)
                     
