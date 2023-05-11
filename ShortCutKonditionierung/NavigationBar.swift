@@ -22,7 +22,6 @@ struct NavigationBar: View {
                 } label: {
                     CustomNavBarButton(buttonText: "shortcut", imageName: "star", isAcitve: selectedTab == .shortcut)
                 }
-                    .tint(Color("icons-secondary"))
             }
             
             Button{
@@ -31,21 +30,18 @@ struct NavigationBar: View {
             } label: {
                 CustomNavBarButton(buttonText: "statistics", imageName: "chart.bar", isAcitve: selectedTab == .statistics)
             }
-            .tint(Color("icons-secondary"))
             
             Button{
                 selectedTab = .home
             } label: {
                 CustomNavBarButton(buttonText: "home", imageName: "house", isAcitve: selectedTab == .home)
             }
-            .tint(Color("icons-secondary"))
-            
+
             Button{
                 selectedTab = .settings
             } label: {
                 CustomNavBarButton(buttonText: "settings", imageName: "gear", isAcitve: selectedTab == .settings)
             }
-            .tint(Color("icons-secondary"))
             
         }
         .frame(height: 80)

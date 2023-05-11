@@ -9,20 +9,22 @@
 	<key>INIntentDefinitionNamespace</key>
 	<string>kYo51D</string>
 	<key>INIntentDefinitionSystemVersion</key>
-	<string>21G115</string>
+	<string>22E261</string>
 	<key>INIntentDefinitionToolsBuildVersion</key>
-	<string>13A233</string>
+	<string>14E222b</string>
 	<key>INIntentDefinitionToolsVersion</key>
-	<string>13.0</string>
+	<string>14.3</string>
 	<key>INIntents</key>
 	<array>
 		<dict>
 			<key>INIntentCategory</key>
-			<string>start</string>
+			<string>generic</string>
 			<key>INIntentConfigurable</key>
 			<true/>
 			<key>INIntentDescriptionID</key>
 			<string>4qAO1P</string>
+			<key>INIntentIneligibleForSuggestions</key>
+			<true/>
 			<key>INIntentManagedParameterCombinations</key>
 			<dict>
 				<key></key>
@@ -39,25 +41,15 @@
 			</dict>
 			<key>INIntentName</key>
 			<string>SayHello</string>
-			<key>INIntentParameterCombinations</key>
-			<dict>
-				<key></key>
-				<dict>
-					<key>INIntentParameterCombinationIsPrimary</key>
-					<true/>
-					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
-					<true/>
-					<key>INIntentParameterCombinationTitle</key>
-					<string>Zeigt den Say Hello-Bildschirm an</string>
-					<key>INIntentParameterCombinationTitleID</key>
-					<string>TzX12O</string>
-				</dict>
-			</dict>
 			<key>INIntentResponse</key>
 			<dict>
 				<key>INIntentResponseCodes</key>
 				<array>
 					<dict>
+						<key>INIntentResponseCodeConciseFormatString</key>
+						<string>success</string>
+						<key>INIntentResponseCodeConciseFormatStringID</key>
+						<string>EIZd8x</string>
 						<key>INIntentResponseCodeName</key>
 						<string>success</string>
 						<key>INIntentResponseCodeSuccess</key>
@@ -69,7 +61,7 @@
 					</dict>
 				</array>
 				<key>INIntentResponseLastParameterTag</key>
-				<integer>5</integer>
+				<integer>6</integer>
 			</dict>
 			<key>INIntentTitle</key>
 			<string>SayHelloIntent</string>
@@ -78,69 +70,7 @@
 			<key>INIntentType</key>
 			<string>Custom</string>
 			<key>INIntentVerb</key>
-			<string>Start</string>
-		</dict>
-		<dict>
-			<key>INIntentCategory</key>
-			<string>generic</string>
-			<key>INIntentConfigurable</key>
-			<true/>
-			<key>INIntentDescriptionID</key>
-			<string>qYloOD</string>
-			<key>INIntentManagedParameterCombinations</key>
-			<dict>
-				<key></key>
-				<dict>
-					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
-					<true/>
-					<key>INIntentParameterCombinationTitle</key>
-					<string>open app</string>
-					<key>INIntentParameterCombinationTitleID</key>
-					<string>hqPKq9</string>
-					<key>INIntentParameterCombinationUpdatesLinked</key>
-					<true/>
-				</dict>
-			</dict>
-			<key>INIntentName</key>
-			<string>OpenApp</string>
-			<key>INIntentParameterCombinations</key>
-			<dict>
-				<key></key>
-				<dict>
-					<key>INIntentParameterCombinationIsPrimary</key>
-					<true/>
-					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
-					<true/>
-					<key>INIntentParameterCombinationTitle</key>
-					<string>open app</string>
-					<key>INIntentParameterCombinationTitleID</key>
-					<string>5d8iFc</string>
-				</dict>
-			</dict>
-			<key>INIntentResponse</key>
-			<dict>
-				<key>INIntentResponseCodes</key>
-				<array>
-					<dict>
-						<key>INIntentResponseCodeName</key>
-						<string>success</string>
-						<key>INIntentResponseCodeSuccess</key>
-						<true/>
-					</dict>
-					<dict>
-						<key>INIntentResponseCodeName</key>
-						<string>failure</string>
-					</dict>
-				</array>
-			</dict>
-			<key>INIntentTitle</key>
-			<string>Open App</string>
-			<key>INIntentTitleID</key>
-			<string>jthR01</string>
-			<key>INIntentType</key>
-			<string>Custom</string>
-			<key>INIntentVerb</key>
-			<string>Do</string>
+			<string>Run</string>
 		</dict>
 		<dict>
 			<key>INIntentCategory</key>
@@ -149,6 +79,8 @@
 			<true/>
 			<key>INIntentDescriptionID</key>
 			<string>ebr7K9</string>
+			<key>INIntentIneligibleForSuggestions</key>
+			<true/>
 			<key>INIntentManagedParameterCombinations</key>
 			<dict>
 				<key></key>
@@ -165,20 +97,6 @@
 			</dict>
 			<key>INIntentName</key>
 			<string>CatchABreath</string>
-			<key>INIntentParameterCombinations</key>
-			<dict>
-				<key></key>
-				<dict>
-					<key>INIntentParameterCombinationIsPrimary</key>
-					<true/>
-					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
-					<true/>
-					<key>INIntentParameterCombinationTitle</key>
-					<string>catch a breath</string>
-					<key>INIntentParameterCombinationTitleID</key>
-					<string>IPBuy3</string>
-				</dict>
-			</dict>
 			<key>INIntentResponse</key>
 			<dict>
 				<key>INIntentResponseCodes</key>
@@ -211,6 +129,8 @@
 			<true/>
 			<key>INIntentDescriptionID</key>
 			<string>lxA4fq</string>
+			<key>INIntentIneligibleForSuggestions</key>
+			<true/>
 			<key>INIntentManagedParameterCombinations</key>
 			<dict>
 				<key></key>
@@ -227,20 +147,6 @@
 			</dict>
 			<key>INIntentName</key>
 			<string>ShockingPictures</string>
-			<key>INIntentParameterCombinations</key>
-			<dict>
-				<key></key>
-				<dict>
-					<key>INIntentParameterCombinationIsPrimary</key>
-					<true/>
-					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
-					<true/>
-					<key>INIntentParameterCombinationTitle</key>
-					<string>shocking pictures</string>
-					<key>INIntentParameterCombinationTitleID</key>
-					<string>hydIl3</string>
-				</dict>
-			</dict>
 			<key>INIntentResponse</key>
 			<dict>
 				<key>INIntentResponseCodes</key>

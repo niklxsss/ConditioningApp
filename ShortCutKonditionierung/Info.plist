@@ -5,11 +5,9 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleURLName</key>
-			<string>myapp.deeplink</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>testAppios.ShortCutKonditionierung</string>
+				<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 			</array>
 		</dict>
 	</array>
@@ -35,17 +33,18 @@
 			<key>IntentsSupported</key>
 			<array>
 				<string>SayHelloIntent</string>
+				<string>CatchABreathIntent</string>
+				<string>ShockingPicturesIntent</string>
 			</array>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.intents-service</string>
 		<key>NSExtensionPrincipalClass</key>
-		<string>$(PRODUCT_MODULE_NAME).IntentHandler</string>
+		<string>MyIntents.IntentHandler</string>
 	</dict>
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>CatchABreathIntent</string>
-		<string>OpenAppIntent</string>
 		<string>SayHelloIntent</string>
 		<string>ShockingPicturesIntent</string>
 	</array>

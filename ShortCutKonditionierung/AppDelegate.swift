@@ -4,15 +4,43 @@ import Intents
 class AppDelegate: UIResponder, UIApplicationDelegate {
     let appState = AppState.shared
 
-   lazy var intentHandler: IntentHandler = {
+   /*lazy var intentHandler: IntentHandler = {
         return IntentHandler()
-    }()
+    }()*/
+    
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        if userActivity.activityType == NSStringFromClass(SayHelloIntent.self) {
+            print("app kommt in den Vordergrund")
+            return true
+        }
+        return false
+    }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         print("App launched")
         checkAuthorization()
+
+        // Überprüfen, ob die App durch einen Siri Shortcut gestartet wurde
+        if let activityDictionary = launchOptions?[.userActivityDictionary] as? [AnyHashable: Any],
+           let userActivity = activityDictionary["UIApplicationLaunchOptionsUserActivityKey"] as? NSUserActivity {
+            // Überprüfen, ob der Activity-Typ mit einem deiner Intents übereinstimmt
+            if userActivity.activityType == "testAppios.ShortCutKonditionierung.sayHello" {
+                print("App started from SayHelloIntent shortcut")
+                // Hier kannst du die entsprechenden Aktionen ausführen
+            }
+        }
+
         return true
     }
+    
+    
+
+    
+    /*func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        print("App launched")
+        checkAuthorization()
+        return true
+    }*/
     
     func application(_ application: UIApplication, handlerFor intent: INIntent) -> Any? {
 
@@ -25,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 case is CatchABreathIntent:
                     print("Handling CatchABreathIntent")
                     openShortCutIntent(.catchABreath)
-                    return true
+                    return IntentHandler()
                     
                 case is ShockingPicturesIntent:
                     print("Handling ShockingPicturesIntent")
@@ -37,12 +65,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
     }
     
-    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-        if userActivity.activityType == "testAppios.ShortCutKonditionierung.sayHello" {
-            return true
+    /*func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        guard let intent = userActivity.interaction?.intent else {
+            return false
         }
-        return false
-    }
+
+        switch intent {
+        case is SayHelloIntent:
+            print("Handling SayHelloIntent")
+            openShortCutIntent(.sayHello)
+            
+        case is CatchABreathIntent:
+            print("Handling CatchABreathIntent")
+            openShortCutIntent(.catchABreath)
+            
+        case is ShockingPicturesIntent:
+            print("Handling ShockingPicturesIntent")
+            openShortCutIntent(.shockPicture)
+            
+        default:
+            return false
+        }
+        
+        return true
+    }*/
 
     func openShortCutIntent(_ shortcut: ShortcutType) {
         DispatchQueue.main.async {
