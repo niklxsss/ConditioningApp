@@ -4,15 +4,27 @@ enum Tabs: Int{
     case statistics = 0
     case home = 1
     case settings = 2
+    case shortcut = 3
 }
 
 struct NavigationBar: View {
     
+    @EnvironmentObject var appState: AppState
     @Binding var selectedTab: Tabs
     
     var body: some View{
         
         HStack{
+            
+            if appState.showShortcutView{
+                Button{
+                    selectedTab = .shortcut
+                } label: {
+                    CustomNavBarButton(buttonText: "shortcut", imageName: "star", isAcitve: selectedTab == .shortcut)
+                }
+                    .tint(Color("icons-secondary"))
+            }
+            
             Button{
                 selectedTab = .statistics
     
@@ -34,9 +46,10 @@ struct NavigationBar: View {
                 CustomNavBarButton(buttonText: "settings", imageName: "gear", isAcitve: selectedTab == .settings)
             }
             .tint(Color("icons-secondary"))
+            
         }
         .frame(height: 80)
-        .frame(maxHeight: .infinity, alignment: .bottom)
+        .frame(maxHeight: 95, alignment: .bottom)
         
     }
 }

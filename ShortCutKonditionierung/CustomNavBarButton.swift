@@ -27,7 +27,6 @@ struct CustomNavBarButton: View {
                 .foregroundColor(.black)
             
             Text(buttonText)
-                //.font(Font.tabBar)
                 .foregroundColor(.black)
             
             

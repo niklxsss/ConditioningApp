@@ -155,6 +155,10 @@
 				<dict>
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
+					<key>INIntentParameterCombinationTitle</key>
+					<string>catch a breath</string>
+					<key>INIntentParameterCombinationTitleID</key>
+					<string>97Vnhi</string>
 					<key>INIntentParameterCombinationUpdatesLinked</key>
 					<true/>
 				</dict>
@@ -169,6 +173,10 @@
 					<true/>
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
+					<key>INIntentParameterCombinationTitle</key>
+					<string>catch a breath</string>
+					<key>INIntentParameterCombinationTitleID</key>
+					<string>IPBuy3</string>
 				</dict>
 			</dict>
 			<key>INIntentResponse</key>
@@ -209,6 +217,10 @@
 				<dict>
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
+					<key>INIntentParameterCombinationTitle</key>
+					<string>shocking pictures</string>
+					<key>INIntentParameterCombinationTitleID</key>
+					<string>xhVz7w</string>
 					<key>INIntentParameterCombinationUpdatesLinked</key>
 					<true/>
 				</dict>
@@ -223,6 +235,10 @@
 					<true/>
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
+					<key>INIntentParameterCombinationTitle</key>
+					<string>shocking pictures</string>
+					<key>INIntentParameterCombinationTitleID</key>
+					<string>hydIl3</string>
 				</dict>
 			</dict>
 			<key>INIntentResponse</key>
