@@ -74,7 +74,7 @@
 		</dict>
 		<dict>
 			<key>INIntentCategory</key>
-			<string>start</string>
+			<string>generic</string>
 			<key>INIntentConfigurable</key>
 			<true/>
 			<key>INIntentDescriptionID</key>
@@ -120,7 +120,7 @@
 			<key>INIntentType</key>
 			<string>Custom</string>
 			<key>INIntentVerb</key>
-			<string>Start</string>
+			<string>Run</string>
 		</dict>
 		<dict>
 			<key>INIntentCategory</key>
@@ -170,7 +170,7 @@
 			<key>INIntentType</key>
 			<string>Custom</string>
 			<key>INIntentVerb</key>
-			<string>Do</string>
+			<string>Run</string>
 		</dict>
 	</array>
 	<key>INTypes</key>

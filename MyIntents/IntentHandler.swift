@@ -2,6 +2,8 @@ import Intents
 
 class IntentHandler: INExtension, SayHelloIntentHandling, CatchABreathIntentHandling, ShockingPicturesIntentHandling {
     
+    static let shared = IntentHandler()
+    
     override func handler(for intent: INIntent) -> Any {
         
         if intent is SayHelloIntent {
@@ -14,11 +16,16 @@ class IntentHandler: INExtension, SayHelloIntentHandling, CatchABreathIntentHand
         return self
     }
     
+    var completion: ((SayHelloIntentResponse) -> Void)?
+    
     func handle(intent: SayHelloIntent, completion: @escaping (SayHelloIntentResponse) -> Void) {
         print("handel sayhello")
-        let userActivity = NSUserActivity(activityType: NSStringFromClass(SayHelloIntent.self))
-        let response = SayHelloIntentResponse(code: .success, userActivity: userActivity)
-        completion(response)
+            let userActivity = NSUserActivity(activityType: NSStringFromClass(SayHelloIntent.self))
+            userActivity.userInfo = ["intent": "sayHello"]
+            let response = SayHelloIntentResponse(code: .continueInApp, userActivity: userActivity)
+            self.completion = completion
+            completion(response)
+            print(response)
     }
     
     func handle(intent: CatchABreathIntent, completion: @escaping (CatchABreathIntentResponse) -> Void) {

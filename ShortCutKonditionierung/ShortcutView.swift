@@ -46,7 +46,7 @@ struct ShortcutView: View {
                     
                     Spacer()
                     
-                    Button(action: {}) {
+                    Button(action: {onExitButtonPress()}) {
                         Text("exit")
                             .frame(width: 150)
                             .padding()
@@ -103,7 +103,7 @@ struct ShortcutView: View {
             if let randomImage = settings.selectedImages.randomElement() {
                 Image(randomImage)
                     .resizable()
-                    .frame(width: 380, height: 350)
+                    .frame(width: 375, height: 375)
                     .cornerRadius(10)
             } else {
                 Text("No image selected")
@@ -123,3 +123,18 @@ struct ShortcutView_Previews: PreviewProvider {
     }
 }
 
+//Response Code Button for Open App and Exit
+
+func onSuccessButtonPress() {
+    let userActivity = NSUserActivity(activityType: NSStringFromClass(SayHelloIntent.self))
+    let response = SayHelloIntentResponse(code: .success, userActivity: userActivity)
+    print(response)
+    IntentHandler.shared.completion?(response)
+}
+
+func onExitButtonPress() {
+    let userActivity = NSUserActivity(activityType: NSStringFromClass(SayHelloIntent.self))
+    let response = SayHelloIntentResponse(code: .failure, userActivity: userActivity)
+    print(response)
+    IntentHandler.shared.completion?(response)
+}

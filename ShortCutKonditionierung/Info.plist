@@ -45,6 +45,7 @@
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>CatchABreathIntent</string>
+		<string>OpenAppIntent</string>
 		<string>SayHelloIntent</string>
 		<string>ShockingPicturesIntent</string>
 	</array>
