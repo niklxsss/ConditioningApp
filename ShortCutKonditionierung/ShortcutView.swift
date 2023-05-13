@@ -87,7 +87,7 @@ struct ShortcutView: View {
             .onAppear {
                 startBreathAnimation()
             }
-            .frame(width: 380)
+            .frame(width: 375)
         }
 
         func startBreathAnimation() {
@@ -126,15 +126,15 @@ struct ShortcutView_Previews: PreviewProvider {
 //Response Code Button for Open App and Exit
 
 func onSuccessButtonPress() {
-    let userActivity = NSUserActivity(activityType: NSStringFromClass(SayHelloIntent.self))
+    /*let userActivity = NSUserActivity(activityType: NSStringFromClass(SayHelloIntent.self))
     let response = SayHelloIntentResponse(code: .success, userActivity: userActivity)
     print(response)
-    IntentHandler.shared.completion?(response)
+    IntentHandler.shared.completion?(response)*/
 }
 
 func onExitButtonPress() {
-    let userActivity = NSUserActivity(activityType: NSStringFromClass(SayHelloIntent.self))
+    /*let userActivity = NSUserActivity(activityType: NSStringFromClass(SayHelloIntent.self))
     let response = SayHelloIntentResponse(code: .failure, userActivity: userActivity)
     print(response)
-    IntentHandler.shared.completion?(response)
+    IntentHandler.shared.completion?(response)*/
 }

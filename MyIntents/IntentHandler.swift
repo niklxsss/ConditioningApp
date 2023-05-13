@@ -16,27 +16,28 @@ class IntentHandler: INExtension, SayHelloIntentHandling, CatchABreathIntentHand
         return self
     }
     
-    var completion: ((SayHelloIntentResponse) -> Void)?
+    //var completion: ((SayHelloIntentResponse) -> Void)?
     
     func handle(intent: SayHelloIntent, completion: @escaping (SayHelloIntentResponse) -> Void) {
         print("handel sayhello")
-            let userActivity = NSUserActivity(activityType: NSStringFromClass(SayHelloIntent.self))
-            userActivity.userInfo = ["intent": "sayHello"]
-            let response = SayHelloIntentResponse(code: .continueInApp, userActivity: userActivity)
-            self.completion = completion
-            completion(response)
-            print(response)
+        //let userActivity = NSUserActivity(activityType: NSStringFromClass(SayHelloIntent.self))
+            //userActivity.userInfo = ["intent": "sayHello"]
+            //let response = SayHelloIntentResponse(code: .continueInApp, userActivity: userActivity)
+            //self.completion = completion
+        let response = SayHelloIntentResponse(code: .continueInApp, userActivity: nil)
+        completion(response)
+        //print(response)
     }
     
     func handle(intent: CatchABreathIntent, completion: @escaping (CatchABreathIntentResponse) -> Void) {
         print("handel catchABreath")
-        let response = CatchABreathIntentResponse(code: .success, userActivity: nil)
+        let response = CatchABreathIntentResponse(code: .continueInApp, userActivity: nil)
         completion(response)
     }
     
     func handle(intent: ShockingPicturesIntent, completion: @escaping (ShockingPicturesIntentResponse) -> Void) {
         print("handel shockingPictures")
-        let response = ShockingPicturesIntentResponse(code: .success, userActivity: nil)
+        let response = ShockingPicturesIntentResponse(code: .continueInApp, userActivity: nil)
         completion(response)
     }
 }
