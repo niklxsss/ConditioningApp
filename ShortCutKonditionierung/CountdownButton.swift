@@ -1,17 +1,20 @@
 import SwiftUI
 
 struct CountdownButton: View {
-    @Binding var originalAppURL: URL?
+    
     var timerDuration: Int
+    var originalAppURL: URL
     
     @State private var buttonEnabled = false
     @State private var timeRemaining: Int
     @State private var timerCompleted = false
+    @State private var startTime: Date?
     
+    let timeTracker = TimeTracker()
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
-    init(originalAppURL: Binding<URL?>, timerDuration: Int) {
-        self._originalAppURL = originalAppURL
+    init(originalAppURL: URL, timerDuration: Int) {
+        self.originalAppURL = originalAppURL
         self.timerDuration = timerDuration
         self._timeRemaining = State(initialValue: timerDuration)
     }
@@ -20,12 +23,16 @@ struct CountdownButton: View {
         Button(action: {
             //Idee: Evtl keinen success Code schicken stattdessen die App bsw Insta öffnen über die App -> Zeit tracken und im nachhinein sobald die app geschlossen wurde failure schicken, damit die App sich nciht nochmal öffnet
             
-            //openOriginalApp()
-            onSuccessButtonPress()
+            print(originalAppURL)
+            
+            if urlStringToAlphabeticString(url: originalAppURL) != "dummy" {
+                    startTime = Date()
+                    UIApplication.shared.open(originalAppURL, options: [:], completionHandler: nil)
+            }
+            
         }) {
-            Text("open app (\(timeRemaining))")
-                .frame(width: 150)
-                .padding()
+            Text("open \(urlStringToAlphabeticString(url: originalAppURL)) in \(timeRemaining)")
+                .frame(width: 180, height: 55)
                 .background(buttonEnabled || timerCompleted ? Color.blue : Color.gray)
                 .foregroundColor(.white)
                 .cornerRadius(10)
@@ -45,19 +52,32 @@ struct CountdownButton: View {
                 timer.upstream.connect().cancel()
             }
         }
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+            if let startTime = startTime {
+                let timeSpent = timeTracker.calculateTimeSpent(from: startTime)
+                timeTracker.saveTimeSpent(timeSpent, for: originalAppURL)
+                self.startTime = nil
+            }
+        }
     }
-
+    
     func startTimer() {
         buttonEnabled = false
         timeRemaining = timerDuration
     }
-
-    func openOriginalApp() {
-        if let url = originalAppURL {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-        }
+    
+    func urlStringToAlphabeticString(url: URL) -> String {
+        let urlString = url.absoluteString
+        let allowedCharacterSet = CharacterSet.letters
+        let resultString = urlString.unicodeScalars.filter { allowedCharacterSet.contains($0) }.map { String($0) }.joined()
+        return resultString
     }
 }
+
+
+
+
+               
 
 
 

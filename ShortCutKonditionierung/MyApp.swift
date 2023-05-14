@@ -16,3 +16,4 @@ struct MyApp: App {
     }
 }
 
+//TODO Notification nach gewisser Zeit senden, zeit stoppen, Diagramme erstellen, Streak einbauen

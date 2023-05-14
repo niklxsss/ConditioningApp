@@ -5,12 +5,9 @@ public class AppState: ObservableObject {
     
     @Published public var showShortcutView = false
     @Published public var launchedAsShortcut = false
-    @Published var selectedShortcut: ShortcutType?
-    @Published public var originalAppURLScheme: String?
+    @Published public var selectedShortcut: ShortcutType?
+    @Published public var openAppUrl: URL = URL(string: "dummy://")!
     
-    public func resetOriginalAppURLScheme() {
-            originalAppURLScheme = nil
-        }
 }
 
 public enum ShortcutType {

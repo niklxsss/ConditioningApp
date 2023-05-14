@@ -4,7 +4,6 @@ import SwiftUI
 struct ShortcutView: View {
     
     @Binding private var selectedTab: Tabs
-    @State private var originalAppURL: URL? = URL(string: "dummyurl://")
     @State private var breathAnimationScale: CGFloat = 1.0
     
     @EnvironmentObject private var appState: AppState
@@ -41,15 +40,13 @@ struct ShortcutView: View {
                 HStack{
                     Spacer()
                     
-                    CountdownButton(originalAppURL: $originalAppURL, timerDuration: settings.timerDuration)
-                                
+                    CountdownButton(originalAppURL: appState.openAppUrl, timerDuration: settings.timerDuration)
                     
                     Spacer()
                     
-                    Button(action: {onExitButtonPress()}) {
+                    Button(action: {exit(0)}) {
                         Text("exit")
-                            .frame(width: 150)
-                            .padding()
+                            .frame(width: 180, height: 55)
                             .background(Color.white)
                             .foregroundColor(.red)
                             .cornerRadius(10)
@@ -121,20 +118,4 @@ struct ShortcutView_Previews: PreviewProvider {
             .environmentObject(AppState.shared)
             .environmentObject(Settings())
     }
-}
-
-//Response Code Button for Open App and Exit
-
-func onSuccessButtonPress() {
-    /*let userActivity = NSUserActivity(activityType: NSStringFromClass(SayHelloIntent.self))
-    let response = SayHelloIntentResponse(code: .success, userActivity: userActivity)
-    print(response)
-    IntentHandler.shared.completion?(response)*/
-}
-
-func onExitButtonPress() {
-    /*let userActivity = NSUserActivity(activityType: NSStringFromClass(SayHelloIntent.self))
-    let response = SayHelloIntentResponse(code: .failure, userActivity: userActivity)
-    print(response)
-    IntentHandler.shared.completion?(response)*/
 }

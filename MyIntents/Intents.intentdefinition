@@ -25,14 +25,20 @@
 			<string>4qAO1P</string>
 			<key>INIntentIneligibleForSuggestions</key>
 			<true/>
+			<key>INIntentInput</key>
+			<string>appURL</string>
+			<key>INIntentKeyParameter</key>
+			<string>appURL</string>
+			<key>INIntentLastParameterTag</key>
+			<integer>8</integer>
 			<key>INIntentManagedParameterCombinations</key>
 			<dict>
-				<key></key>
+				<key>appURL</key>
 				<dict>
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
-					<string>Zeigt den Say Hello-Bildschirm an</string>
+					<string>Zeigt den Say Hello-Bildschirm vor ${appURL} an.</string>
 					<key>INIntentParameterCombinationTitleID</key>
 					<string>5O53ig</string>
 					<key>INIntentParameterCombinationUpdatesLinked</key>
@@ -41,6 +47,45 @@
 			</dict>
 			<key>INIntentName</key>
 			<string>SayHello</string>
+			<key>INIntentParameters</key>
+			<array>
+				<dict>
+					<key>INIntentParameterConfigurable</key>
+					<true/>
+					<key>INIntentParameterDisplayName</key>
+					<string>App URL</string>
+					<key>INIntentParameterDisplayNameID</key>
+					<string>gx6FBv</string>
+					<key>INIntentParameterDisplayPriority</key>
+					<integer>1</integer>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataDefaultValue</key>
+						<string>dummy://</string>
+					</dict>
+					<key>INIntentParameterName</key>
+					<string>appURL</string>
+					<key>INIntentParameterPromptDialogs</key>
+					<array>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Configuration</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Primary</string>
+						</dict>
+					</array>
+					<key>INIntentParameterTag</key>
+					<integer>8</integer>
+					<key>INIntentParameterType</key>
+					<string>URL</string>
+				</dict>
+			</array>
 			<key>INIntentResponse</key>
 			<dict>
 				<key>INIntentResponseCodes</key>

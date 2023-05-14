@@ -16,10 +16,10 @@ class IntentHandler: INExtension, SayHelloIntentHandling, CatchABreathIntentHand
         return self
     }
     
-    //var completion: ((SayHelloIntentResponse) -> Void)?
-    
     func handle(intent: SayHelloIntent, completion: @escaping (SayHelloIntentResponse) -> Void) {
         print("handel sayhello")
+        AppState.shared.openAppUrl = intent.appURL ?? URL(string: "dummy://")!
+                
         //let userActivity = NSUserActivity(activityType: NSStringFromClass(SayHelloIntent.self))
             //userActivity.userInfo = ["intent": "sayHello"]
             //let response = SayHelloIntentResponse(code: .continueInApp, userActivity: userActivity)

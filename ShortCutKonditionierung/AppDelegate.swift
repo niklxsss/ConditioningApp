@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, handlerFor intent: INIntent) -> Any? {
                 switch intent {
                 case is SayHelloIntent:
+                
                     print("Handling SayHelloIntent")
                     openShortCutIntent(.sayHello)
                     return IntentHandler()
