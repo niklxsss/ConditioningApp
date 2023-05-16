@@ -22,7 +22,7 @@ struct CountdownButton: View {
     var body: some View {
         Button(action: {
             
-            print(originalAppURL)
+            timeTracker.scheduleNotification(for: originalAppURL)
             
             if urlStringToAlphabeticString(url: originalAppURL) != "dummy" {
                     startTime = Date()

@@ -2,11 +2,15 @@ import SwiftUI
 import Intents
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
     let appState = AppState.shared
+    let timeTracker = TimeTracker()
  
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         print("App launched")
         checkAuthorization()
+        requestNotificationPermission()
+        timeTracker.fillMissingDates()
         return true
     }
     
@@ -61,4 +65,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
         }
     }
+    
+    func requestNotificationPermission() {
+            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { granted, error in
+                if let error = error {
+                    print("Error requesting notification permissions: \(error)")
+                } else if !granted {
+                    print("User did not grant notification permissions")
+                } else if granted {
+                    print("App is authorized to send notification")
+                }
+            }
+        }
 }

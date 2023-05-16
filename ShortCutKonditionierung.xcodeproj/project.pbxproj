@@ -16,6 +16,7 @@
 		F43453922A026CB800EFBCB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED7A3A2A00FB57004B2FF2 /* AppDelegate.swift */; };
 		F43453962A026EF400EFBCB8 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = F4B8C9A029FEFDC7005995AA /* Intents.intentdefinition */; };
 		F46431402A1055E800D7DE89 /* TimeTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464313F2A1055E800D7DE89 /* TimeTracker.swift */; };
+		F46431412A139F6E00D7DE89 /* TimeTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464313F2A1055E800D7DE89 /* TimeTracker.swift */; };
 		F4947D6C2A0A404200F72301 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED7A1629FFFEFF004B2FF2 /* IntentHandler.swift */; };
 		F4947D702A0A79F400F72301 /* CountdownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4947D6F2A0A79F400F72301 /* CountdownButton.swift */; };
 		F4947D722A0A892B00F72301 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4947D712A0A892A00F72301 /* Settings.swift */; };
@@ -466,6 +467,7 @@
 				F43453922A026CB800EFBCB8 /* AppDelegate.swift in Sources */,
 				F43453962A026EF400EFBCB8 /* Intents.intentdefinition in Sources */,
 				F4947D6C2A0A404200F72301 /* IntentHandler.swift in Sources */,
+				F46431412A139F6E00D7DE89 /* TimeTracker.swift in Sources */,
 				F4D23E042A026FE800670EA1 /* AppState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

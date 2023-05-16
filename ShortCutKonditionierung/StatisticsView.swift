@@ -20,7 +20,10 @@ struct StatisticsView: View {
                             
                             let dataDict = UserDefaults.standard.dictionary(forKey: url) as? [String: Double] ?? [:]
                             let data: [(day: String, hours: Double)] = Array(dataDict)
-                                .map { (day: $0.key, hours: $0.value) }
+                                .map { (day: $0.key, hours: $0.value)
+                                }
+                                .sorted { $0.day < $1.day
+                            }
                             
                             GroupBox(label: HStack {
                                 Text(url).fontWeight(.bold)
