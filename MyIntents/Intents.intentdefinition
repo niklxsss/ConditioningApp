@@ -126,9 +126,11 @@
 			<string>ebr7K9</string>
 			<key>INIntentIneligibleForSuggestions</key>
 			<true/>
+			<key>INIntentLastParameterTag</key>
+			<integer>2</integer>
 			<key>INIntentManagedParameterCombinations</key>
 			<dict>
-				<key></key>
+				<key>appURL</key>
 				<dict>
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
@@ -142,6 +144,45 @@
 			</dict>
 			<key>INIntentName</key>
 			<string>CatchABreath</string>
+			<key>INIntentParameters</key>
+			<array>
+				<dict>
+					<key>INIntentParameterConfigurable</key>
+					<true/>
+					<key>INIntentParameterDisplayName</key>
+					<string>App URL</string>
+					<key>INIntentParameterDisplayNameID</key>
+					<string>CjVh8W</string>
+					<key>INIntentParameterDisplayPriority</key>
+					<integer>1</integer>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataDefaultValue</key>
+						<string>dummy://</string>
+					</dict>
+					<key>INIntentParameterName</key>
+					<string>appURL</string>
+					<key>INIntentParameterPromptDialogs</key>
+					<array>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Configuration</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Primary</string>
+						</dict>
+					</array>
+					<key>INIntentParameterTag</key>
+					<integer>2</integer>
+					<key>INIntentParameterType</key>
+					<string>URL</string>
+				</dict>
+			</array>
 			<key>INIntentResponse</key>
 			<dict>
 				<key>INIntentResponseCodes</key>
@@ -177,10 +218,10 @@
 			<key>INIntentIneligibleForSuggestions</key>
 			<true/>
 			<key>INIntentLastParameterTag</key>
-			<integer>1</integer>
+			<integer>3</integer>
 			<key>INIntentManagedParameterCombinations</key>
 			<dict>
-				<key></key>
+				<key>appURL</key>
 				<dict>
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
@@ -194,6 +235,45 @@
 			</dict>
 			<key>INIntentName</key>
 			<string>ShockingPictures</string>
+			<key>INIntentParameters</key>
+			<array>
+				<dict>
+					<key>INIntentParameterConfigurable</key>
+					<true/>
+					<key>INIntentParameterDisplayName</key>
+					<string>App URL</string>
+					<key>INIntentParameterDisplayNameID</key>
+					<string>xMoHWn</string>
+					<key>INIntentParameterDisplayPriority</key>
+					<integer>1</integer>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataDefaultValue</key>
+						<string>dummy://</string>
+					</dict>
+					<key>INIntentParameterName</key>
+					<string>appURL</string>
+					<key>INIntentParameterPromptDialogs</key>
+					<array>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Configuration</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Primary</string>
+						</dict>
+					</array>
+					<key>INIntentParameterTag</key>
+					<integer>3</integer>
+					<key>INIntentParameterType</key>
+					<string>URL</string>
+				</dict>
+			</array>
 			<key>INIntentResponse</key>
 			<dict>
 				<key>INIntentResponseCodes</key>
@@ -214,6 +294,101 @@
 			<string>Shocking Pictures</string>
 			<key>INIntentTitleID</key>
 			<string>ns42gq</string>
+			<key>INIntentType</key>
+			<string>Custom</string>
+			<key>INIntentVerb</key>
+			<string>Run</string>
+		</dict>
+		<dict>
+			<key>INIntentCategory</key>
+			<string>generic</string>
+			<key>INIntentConfigurable</key>
+			<true/>
+			<key>INIntentDescriptionID</key>
+			<string>AyMyZE</string>
+			<key>INIntentIneligibleForSuggestions</key>
+			<true/>
+			<key>INIntentInput</key>
+			<string>appURL</string>
+			<key>INIntentKeyParameter</key>
+			<string>appURL</string>
+			<key>INIntentLastParameterTag</key>
+			<integer>2</integer>
+			<key>INIntentManagedParameterCombinations</key>
+			<dict>
+				<key>appURL</key>
+				<dict>
+					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
+					<true/>
+					<key>INIntentParameterCombinationTitle</key>
+					<string>Zeigt den Say Hello-Bildschirm vor ${appURL} an.</string>
+					<key>INIntentParameterCombinationTitleID</key>
+					<string>vL2O74</string>
+					<key>INIntentParameterCombinationUpdatesLinked</key>
+					<true/>
+				</dict>
+			</dict>
+			<key>INIntentName</key>
+			<string>WarningByText</string>
+			<key>INIntentParameters</key>
+			<array>
+				<dict>
+					<key>INIntentParameterConfigurable</key>
+					<true/>
+					<key>INIntentParameterDisplayName</key>
+					<string>App URL</string>
+					<key>INIntentParameterDisplayNameID</key>
+					<string>k2fOex</string>
+					<key>INIntentParameterDisplayPriority</key>
+					<integer>1</integer>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataDefaultValue</key>
+						<string>dummy://</string>
+					</dict>
+					<key>INIntentParameterName</key>
+					<string>appURL</string>
+					<key>INIntentParameterPromptDialogs</key>
+					<array>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Configuration</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Primary</string>
+						</dict>
+					</array>
+					<key>INIntentParameterTag</key>
+					<integer>2</integer>
+					<key>INIntentParameterType</key>
+					<string>URL</string>
+				</dict>
+			</array>
+			<key>INIntentResponse</key>
+			<dict>
+				<key>INIntentResponseCodes</key>
+				<array>
+					<dict>
+						<key>INIntentResponseCodeName</key>
+						<string>success</string>
+						<key>INIntentResponseCodeSuccess</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>INIntentResponseCodeName</key>
+						<string>failure</string>
+					</dict>
+				</array>
+			</dict>
+			<key>INIntentTitle</key>
+			<string>Warning By Text</string>
+			<key>INIntentTitleID</key>
+			<string>ZyrCOp</string>
 			<key>INIntentType</key>
 			<string>Custom</string>
 			<key>INIntentVerb</key>

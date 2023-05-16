@@ -14,4 +14,5 @@ public enum ShortcutType {
     case sayHello
     case catchABreath
     case shockPicture
+    case warningByText
 }

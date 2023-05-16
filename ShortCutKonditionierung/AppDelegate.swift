@@ -28,6 +28,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     openShortCutIntent(.shockPicture)
                     return IntentHandler()
                     
+                case is WarningByTextIntent:
+                    print("Handling WarningByTextIntent")
+                    openShortCutIntent(.warningByText)
+                    return IntentHandler()
+                    
                 default:
                     return nil
                 }

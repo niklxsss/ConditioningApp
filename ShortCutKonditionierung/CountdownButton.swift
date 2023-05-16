@@ -21,7 +21,6 @@ struct CountdownButton: View {
 
     var body: some View {
         Button(action: {
-            //Idee: Evtl keinen success Code schicken stattdessen die App bsw Insta öffnen über die App -> Zeit tracken und im nachhinein sobald die app geschlossen wurde failure schicken, damit die App sich nciht nochmal öffnet
             
             print(originalAppURL)
             

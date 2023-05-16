@@ -1,6 +1,6 @@
 import Intents
 
-class IntentHandler: INExtension, SayHelloIntentHandling, CatchABreathIntentHandling, ShockingPicturesIntentHandling {
+class IntentHandler: INExtension, SayHelloIntentHandling, CatchABreathIntentHandling, ShockingPicturesIntentHandling, WarningByTextIntentHandling {
     
     static let shared = IntentHandler()
     
@@ -12,6 +12,8 @@ class IntentHandler: INExtension, SayHelloIntentHandling, CatchABreathIntentHand
             return self as CatchABreathIntentHandling
         } else if intent is ShockingPicturesIntent {
             return self as ShockingPicturesIntentHandling
+        } else if intent is WarningByTextIntent{
+            return self as WarningByTextIntentHandling
         }
         return self
     }
@@ -31,13 +33,23 @@ class IntentHandler: INExtension, SayHelloIntentHandling, CatchABreathIntentHand
     
     func handle(intent: CatchABreathIntent, completion: @escaping (CatchABreathIntentResponse) -> Void) {
         print("handel catchABreath")
+        AppState.shared.openAppUrl = intent.appURL ?? URL(string: "dummy://")!
         let response = CatchABreathIntentResponse(code: .continueInApp, userActivity: nil)
         completion(response)
     }
     
     func handle(intent: ShockingPicturesIntent, completion: @escaping (ShockingPicturesIntentResponse) -> Void) {
         print("handel shockingPictures")
+        AppState.shared.openAppUrl = intent.appURL ?? URL(string: "dummy://")!
         let response = ShockingPicturesIntentResponse(code: .continueInApp, userActivity: nil)
+        completion(response)
+    }
+    
+    func handle(intent: WarningByTextIntent, completion: @escaping (WarningByTextIntentResponse) -> Void) {
+        print("handel WarningByText")
+        AppState.shared.openAppUrl = intent.appURL ?? URL(string: "dummy://")!
+            
+        let response = WarningByTextIntentResponse(code: .continueInApp, userActivity: nil)
         completion(response)
     }
 }

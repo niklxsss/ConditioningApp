@@ -16,10 +16,6 @@ struct ShortcutView: View {
     var body: some View {
         NavigationView {
             VStack {
-            
-                Text("App")
-                    .font(.title)
-                    .padding()
                 
                 Spacer()
                 
@@ -33,6 +29,9 @@ struct ShortcutView: View {
                 }
                 else if appState.selectedShortcut == .shockPicture {
                     showSelectedImagesView()
+                }
+                else if appState.selectedShortcut == .warningByText {
+                    showRandomWarningTextView()
                 }
                 
                 Spacer()
@@ -108,6 +107,36 @@ struct ShortcutView: View {
             }
         }
     }
+    
+    @ViewBuilder
+    private func showRandomWarningTextView() -> some View {
+        if let randomInfoText = settings.infoTexts.randomElement() {
+            ZStack {
+                Color.gray
+                    .frame(width: 375, height: 375)
+                    .cornerRadius(10)
+                
+                Text(randomInfoText)
+                    .font(.body)
+                    .padding()
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+            }
+        } else {
+            ZStack {
+                Color.gray
+                    .frame(width: 375, height: 375)
+                    .cornerRadius(10)
+                
+                Text("No info text available")
+                    .font(.body)
+                    .padding()
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+            }
+        }
+    }
+
 
 }
 

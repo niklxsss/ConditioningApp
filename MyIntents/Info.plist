@@ -13,9 +13,9 @@
 			<key>IntentsSupported</key>
 			<array>
 				<string>CatchABreathIntent</string>
-				<string>OpenAppIntent</string>
 				<string>SayHelloIntent</string>
 				<string>ShockingPicturesIntent</string>
+				<string>WarningByTextIntent</string>
 			</array>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
@@ -28,6 +28,7 @@
 		<string>SayHelloIntent</string>
 		<string>CatchABreathIntent</string>
 		<string>ShockingPicturesIntent</string>
+		<string>WarningByTextIntent</string>
 	</array>
 </dict>
 </plist>

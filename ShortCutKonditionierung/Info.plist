@@ -15,10 +15,10 @@
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>INIntentsSupported</key>
 	<array>
-		<string>OpenAppIntent</string>
 		<string>SayHelloIntent</string>
 		<string>CatchABreathIntent</string>
 		<string>ShockingPicturesIntent</string>
+		<string>WarningByTextIntent</string>
 	</array>
 	<key>MinimumOSVersion</key>
 	<string>$(IPHONEOS_DEPLOYMENT_TARGET)</string>
@@ -35,6 +35,7 @@
 				<string>SayHelloIntent</string>
 				<string>CatchABreathIntent</string>
 				<string>ShockingPicturesIntent</string>
+				<string>WarningByTextIntent</string>
 			</array>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
@@ -48,6 +49,7 @@
 		<string>OpenAppIntent</string>
 		<string>SayHelloIntent</string>
 		<string>ShockingPicturesIntent</string>
+		<string>WarningByTextIntent</string>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>

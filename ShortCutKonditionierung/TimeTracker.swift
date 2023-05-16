@@ -12,13 +12,13 @@ class TimeTracker {
     
     func saveTimeSpent(_ timeSpent: TimeInterval, for url: URL) {
         let urlString = urlStringToAlphabeticString(url: url)
-        var data = UserDefaults.standard.dictionary(forKey: urlString) as? [String: Double] ?? [String: Double]()
+        var timeData = UserDefaults.standard.dictionary(forKey: urlString) as? [String: Double] ?? [String: Double]()
         let dateKey = getDateKey()
-        print(data)
+        print(timeData)
         print(dateKey)
-        let previousTime = data[dateKey] ?? 0
-        data[dateKey] = previousTime + timeSpent/3600
-        UserDefaults.standard.setValue(data, forKey: urlString)
+        let previousTime = timeData[dateKey] ?? 0
+        timeData[dateKey] = previousTime + timeSpent/3600
+        UserDefaults.standard.setValue(timeData, forKey: urlString)
         
         var urlsList = UserDefaults.standard.array(forKey: "appsWithTimeData") as? [String] ?? [String]()
         

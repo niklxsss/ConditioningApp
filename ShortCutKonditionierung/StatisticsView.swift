@@ -47,6 +47,7 @@ struct StatisticsView: View {
                     //.padding()
                     
                     
+                    Spacer()
                     
                     NavigationBar(selectedTab: $selectedTab)
                     
