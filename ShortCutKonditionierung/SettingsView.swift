@@ -47,11 +47,21 @@ struct SettingsView: View {
 }
 
 struct NotificationsSettingsView: View {
+    @EnvironmentObject var settings: Settings
+    let notificationTimes = Array(1...29)
+    
     var body: some View {
-        Text("Notifications Settings View")
-            .navigationBarTitle(Text("notifications"))
+        List {
+            Picker(selection: $settings.notificationTime, label: Text("Notification Time")) {
+                ForEach(notificationTimes, id: \.self) {
+                    Text("\($0) mins")
+                }
+            }
+        }
+        .navigationBarTitle(Text("Notifications"))
     }
 }
+
 
 struct BreatheSettingsView: View {
     var body: some View {

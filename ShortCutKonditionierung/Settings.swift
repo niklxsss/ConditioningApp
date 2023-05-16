@@ -10,6 +10,17 @@ class Settings: ObservableObject {
             UserDefaults.standard.set(timerDuration, forKey: "timerDuration")
         }
     }
+    
+    @Published var notificationTime: Int {
+            didSet {
+                if notificationTime < 1 {
+                    notificationTime = 1
+                } else if notificationTime > 29 {
+                    notificationTime = 29
+                }
+                UserDefaults.standard.set(notificationTime, forKey: "notificationTime")
+            }
+        }
 
     @Published var selectedImages: [String] {
         didSet {
@@ -33,6 +44,9 @@ class Settings: ObservableObject {
     init() {
         let loadedTimerDuration = UserDefaults.standard.integer(forKey: "timerDuration")
         self.timerDuration = loadedTimerDuration < 5 ? 10 : loadedTimerDuration
+        
+        let loadedNotificationTime = UserDefaults.standard.integer(forKey: "notificationTime")
+        self.notificationTime = loadedNotificationTime < 1 || loadedNotificationTime > 29 ? 5 : loadedNotificationTime
 
         if let data = UserDefaults.standard.data(forKey: "selectedImages"),
            let decodedImages = try? JSONDecoder().decode([String].self, from: data) {

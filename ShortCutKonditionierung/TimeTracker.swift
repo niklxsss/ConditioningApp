@@ -1,7 +1,9 @@
 import Foundation
+import SwiftUI
 import UserNotifications
 
 public class TimeTracker {
+    
     
     func startTracking() -> Date {
         return Date()
@@ -96,7 +98,7 @@ public class TimeTracker {
     public func scheduleNotification(for url: URL) {
         let usageTimeToday = getUsageTimeForToday(for: url)
         let remainingTime = (30 * 60) - (usageTimeToday * 3600)
-        let notificationTime = max(remainingTime - (5 * 60), 0)
+        let notificationTime = max(Int(remainingTime) - (UserDefaults.standard.integer(forKey: "notificationTime") * 60), 0)
 
         let content = UNMutableNotificationContent()
         content.title = "Attention!"
