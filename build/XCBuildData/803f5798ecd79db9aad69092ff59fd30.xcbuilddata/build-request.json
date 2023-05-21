@@ -1,0 +1,74 @@
+{
+  "buildCommand" : {
+    "command" : "prepareForIndexing",
+    "enableIndexBuildArena" : false,
+    "targets" : null
+  },
+  "configuredTargets" : [
+    {
+      "guid" : "2f8a1c2731fad3b8f3ca370685a3e6a7b54ab19d3d556112e025bd4cdc7d1b46"
+    },
+    {
+      "guid" : "2f8a1c2731fad3b8f3ca370685a3e6a794c964f0d506bf3139456cfd92071bbc"
+    },
+    {
+      "guid" : "2f8a1c2731fad3b8f3ca370685a3e6a74e19a00ed8c6c1e603b52d85c6c36319"
+    },
+    {
+      "guid" : "2f8a1c2731fad3b8f3ca370685a3e6a7a0b6b797622f6edfc4ebd0b3b5243862"
+    }
+  ],
+  "containerPath" : "/Users/niklxs/Desktop/ShortCutKonditionierung/ShortCutKonditionierung.xcodeproj",
+  "continueBuildingAfterErrors" : true,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "arm64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "iphoneos",
+      "sdk" : "iphoneos16.4",
+      "sdkVariant" : "iphoneos",
+      "supportedArchitectures" : [
+        "arm64e",
+        "arm64v8",
+        "arm64",
+        "armv8"
+      ],
+      "targetArchitecture" : "arm64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "",
+      "buildProductsPath" : "",
+      "derivedDataPath" : "/Users/niklxs/Library/Developer/Xcode/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/niklxs/Library/Developer/Xcode/DerivedData/ShortCutKonditionierung-cjuriwadcuyiaqbdvfdesqclfgvz/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/niklxs/Library/Developer/Xcode/DerivedData/ShortCutKonditionierung-cjuriwadcuyiaqbdvfdesqclfgvz/Index.noindex/PrecompiledHeaders",
+      "pchPath" : ""
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ASSETCATALOG_FILTER_FOR_DEVICE_MODEL" : "iPhone12,1",
+          "ASSETCATALOG_FILTER_FOR_DEVICE_OS_VERSION" : "16.4.1",
+          "ASSETCATALOG_FILTER_FOR_THINNING_DEVICE_CONFIGURATION" : "iPhone12,1",
+          "BUILD_ACTIVE_RESOURCES_ONLY" : "YES",
+          "ENABLE_PREVIEWS" : "NO",
+          "TARGET_DEVICE_IDENTIFIER" : "00008030-001A24D10191402E",
+          "TARGET_DEVICE_MODEL" : "iPhone12,1",
+          "TARGET_DEVICE_OS_VERSION" : "16.4.1",
+          "TARGET_DEVICE_PLATFORM_NAME" : "iphoneos"
+        }
+      }
+    }
+  },
+  "qos" : "default",
+  "schemeCommand" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : true,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

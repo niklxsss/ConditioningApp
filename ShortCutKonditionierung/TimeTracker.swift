@@ -34,8 +34,6 @@ public class TimeTracker {
         
         createTestData()
         
-        //Streak Userdefault data einfügen: pro urlString wird die anzahl an Aufrufen pro Datum gespeichert. bleibt die Tagesanzahl <= 5 wird die Streak forgesetzt oder streak ssetzt sich fort wenn man unter einer std pro Tag bleibt
-        
     }
     
     public func fillMissingDates() {
@@ -110,7 +108,24 @@ public class TimeTracker {
 
         UNUserNotificationCenter.current().add(request)
     }
-
+    
+    public func calculateStreak(data: [(day: String, hours: Double)]) -> Int {
+        var streakCount = 0
+        let today = getDateKey()
+        
+        for (day, hours) in data.reversed() {
+            if hours > 0.5 {
+                break
+            }
+            if day == today {
+                
+            }
+            else {
+                streakCount += 1
+            }
+        }
+        return streakCount
+    }
     
     func createTestData() {
         let dummyURL = URL(string: "a1test")!
@@ -124,7 +139,7 @@ public class TimeTracker {
         for i in 0..<50 {
             let date = Calendar.current.date(byAdding: .day, value: -i, to: currentDate)!
             let dateKey = dateFormatter.string(from: date)
-            dummyData[dateKey] = Double.random(in: 0...8)
+            dummyData[dateKey] = Double.random(in: 0...0.5)
         }
         
         UserDefaults.standard.setValue(dummyData, forKey: dummyURLString)

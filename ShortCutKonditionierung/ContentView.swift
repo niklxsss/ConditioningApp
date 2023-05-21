@@ -20,6 +20,7 @@ struct ContentView: View {
                 StatisticsView(selectedTab: $selectedTab)
             case .home:
                 HomeView(selectedTab: $selectedTab)
+                    .environmentObject(appState)
             case .settings:
                 SettingsView(selectedTab: $selectedTab)
             case .shortcut:

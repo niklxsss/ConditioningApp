@@ -36,6 +36,7 @@
 		F4B9B36729EFF52E002E34FD /* ShortCutKonditionierungTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B9B36629EFF52E002E34FD /* ShortCutKonditionierungTests.swift */; };
 		F4B9B37129EFF52E002E34FD /* ShortCutKonditionierungUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B9B37029EFF52E002E34FD /* ShortCutKonditionierungUITests.swift */; };
 		F4B9B37329EFF52E002E34FD /* ShortCutKonditionierungUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B9B37229EFF52E002E34FD /* ShortCutKonditionierungUITestsLaunchTests.swift */; };
+		F4BD33DA2A1AA1D4007A9839 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD33D92A1AA1D4007A9839 /* ChartView.swift */; };
 		F4D23E042A026FE800670EA1 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED7A372A00F2C0004B2FF2 /* AppState.swift */; };
 		F4ED7A382A00F2C0004B2FF2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED7A372A00F2C0004B2FF2 /* AppState.swift */; };
 		F4ED7A3B2A00FB57004B2FF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED7A3A2A00FB57004B2FF2 /* AppDelegate.swift */; };
@@ -105,6 +106,7 @@
 		F4B9B36C29EFF52E002E34FD /* ShortCutKonditionierungUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShortCutKonditionierungUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B9B37029EFF52E002E34FD /* ShortCutKonditionierungUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortCutKonditionierungUITests.swift; sourceTree = "<group>"; };
 		F4B9B37229EFF52E002E34FD /* ShortCutKonditionierungUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortCutKonditionierungUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F4BD33D92A1AA1D4007A9839 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		F4CA3D7829FFD5FB00A75A4C /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		F4CA3D8329FFD5FB00A75A4C /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		F4ED7A1629FFFEFF004B2FF2 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				F49666F229EFF6F700D8E433 /* ShortcutView.swift */,
 				F4B8A5FC29F7D51B00AB9601 /* ContentView.swift */,
 				F49666F029EFF6EC00D8E433 /* NavigationBar.swift */,
+				F4BD33D92A1AA1D4007A9839 /* ChartView.swift */,
 				F498477C29F0184100903C4F /* CustomNavBarButton.swift */,
 				F4947D6F2A0A79F400F72301 /* CountdownButton.swift */,
 				F4B9B35929EFF52E002E34FD /* Assets.xcassets */,
@@ -428,6 +431,7 @@
 				F4ED7A3B2A00FB57004B2FF2 /* AppDelegate.swift in Sources */,
 				F4947D722A0A892B00F72301 /* Settings.swift in Sources */,
 				F49666ED29EFF6C900D8E433 /* HomeView.swift in Sources */,
+				F4BD33DA2A1AA1D4007A9839 /* ChartView.swift in Sources */,
 				F424B9372A0D0AE000E049BE /* IntentHandler.swift in Sources */,
 				F46431402A1055E800D7DE89 /* TimeTracker.swift in Sources */,
 				F498478329F01BD300903C4F /* StatisticsView.swift in Sources */,
@@ -640,7 +644,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = testAppios.ShortCutKonditionierung;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.ShortCutKonditionierung;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "ShortCutKonditionierung-Bridging-Header.h";
@@ -679,7 +683,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = testAppios.ShortCutKonditionierung;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.ShortCutKonditionierung;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "ShortCutKonditionierung-Bridging-Header.h";

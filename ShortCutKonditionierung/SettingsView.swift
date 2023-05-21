@@ -52,7 +52,7 @@ struct NotificationsSettingsView: View {
     
     var body: some View {
         List {
-            Picker(selection: $settings.notificationTime, label: Text("Notification Time")) {
+            Picker(selection: $settings.notificationTime, label: Text("Notification time before streak ends")) {
                 ForEach(notificationTimes, id: \.self) {
                     Text("\($0) mins")
                 }

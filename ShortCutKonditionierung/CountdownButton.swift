@@ -24,13 +24,13 @@ struct CountdownButton: View {
             
             timeTracker.scheduleNotification(for: originalAppURL)
             
-            if urlStringToAlphabeticString(url: originalAppURL) != "dummy" {
+            if timeTracker.urlStringToAlphabeticString(url: originalAppURL) != "dummy" {
                     startTime = Date()
                     UIApplication.shared.open(originalAppURL, options: [:], completionHandler: nil)
             }
             
         }) {
-            Text("open \(urlStringToAlphabeticString(url: originalAppURL)) in \(timeRemaining)")
+            Text("open \(timeTracker.urlStringToAlphabeticString(url: originalAppURL)) in \(timeRemaining)")
                 .frame(width: 180, height: 55)
                 .background(buttonEnabled || timerCompleted ? Color.blue : Color.gray)
                 .foregroundColor(.white)
@@ -65,12 +65,6 @@ struct CountdownButton: View {
         timeRemaining = timerDuration
     }
     
-    func urlStringToAlphabeticString(url: URL) -> String {
-        let urlString = url.absoluteString
-        let allowedCharacterSet = CharacterSet.letters
-        let resultString = urlString.unicodeScalars.filter { allowedCharacterSet.contains($0) }.map { String($0) }.joined()
-        return resultString
-    }
 }
 
 

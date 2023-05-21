@@ -1,0 +1,4 @@
+Target dependency graph (2 targets)
+MyIntents in ShortCutKonditionierung, no dependencies
+ShortCutKonditionierung in ShortCutKonditionierung, depends on:
+MyIntents in ShortCutKonditionierung (explicit)
