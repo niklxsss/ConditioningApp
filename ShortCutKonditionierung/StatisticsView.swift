@@ -4,8 +4,6 @@ import Charts
 struct StatisticsView: View {
     
     @Binding private var selectedTab: Tabs
-    
-    let timeTracker = TimeTracker()
         
     init(selectedTab: Binding<Tabs>) {
         _selectedTab = selectedTab

@@ -4,12 +4,12 @@ import Intents
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let appState = AppState.shared
-    let timeTracker = TimeTracker()
+    let utils = Utils()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         print("App launched")
         checkAuthorizations()
-        timeTracker.fillMissingDates()
+        utils.fillMissingDates()
         return true
     }
     

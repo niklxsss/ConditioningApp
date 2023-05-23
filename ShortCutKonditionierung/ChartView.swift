@@ -3,7 +3,7 @@ import Charts
 
 public struct ChartView: View {
     let url: String
-    let timeTracker = TimeTracker()
+    let utils = Utils()
 
     public var body: some View {
         let dataDict = UserDefaults.standard.dictionary(forKey: url) as? [String: Double]
@@ -17,7 +17,7 @@ public struct ChartView: View {
                     .map { (day: $0.key, hours: $0.value) }
                     .sorted { $0.day < $1.day }
                 
-                let streak = timeTracker.calculateStreak(data: data)
+                let streak = utils.calculateStreak(data: data)
                 if streak >= 3 {
                     Text("Streak: \(streak)🔥")
                 }

@@ -10,7 +10,7 @@ struct CountdownButton: View {
     @State private var timerCompleted = false
     @State private var startTime: Date?
     
-    let timeTracker = TimeTracker()
+    let utils = Utils()
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     init(originalAppURL: URL, timerDuration: Int) {
@@ -22,15 +22,15 @@ struct CountdownButton: View {
     var body: some View {
         Button(action: {
             
-            timeTracker.scheduleNotification(for: originalAppURL)
+            utils.scheduleNotification(for: originalAppURL)
             
-            if timeTracker.urlStringToAlphabeticString(url: originalAppURL) != "dummy" {
+            if utils.urlStringToAlphabeticString(url: originalAppURL) != "dummy" {
                     startTime = Date()
                     UIApplication.shared.open(originalAppURL, options: [:], completionHandler: nil)
             }
             
         }) {
-            Text("open \(timeTracker.urlStringToAlphabeticString(url: originalAppURL)) in \(timeRemaining)")
+            Text("open \(utils.urlStringToAlphabeticString(url: originalAppURL)) in \(timeRemaining)")
                 .frame(width: 180, height: 55)
                 .background(buttonEnabled || timerCompleted ? Color.blue : Color.gray)
                 .foregroundColor(.white)
@@ -53,8 +53,8 @@ struct CountdownButton: View {
         }
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
             if let startTime = startTime {
-                let timeSpent = timeTracker.calculateTimeSpent(from: startTime)
-                timeTracker.saveTimeSpent(timeSpent, for: originalAppURL)
+                let timeSpent = utils.calculateTimeSpent(from: startTime)
+                utils.saveTimeSpent(timeSpent, for: originalAppURL)
                 self.startTime = nil
             }
         }

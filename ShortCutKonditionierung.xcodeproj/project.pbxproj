@@ -15,8 +15,8 @@
 		F424B93C2A0D17AB00E049BE /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = F4B8C9A029FEFDC7005995AA /* Intents.intentdefinition */; };
 		F43453922A026CB800EFBCB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED7A3A2A00FB57004B2FF2 /* AppDelegate.swift */; };
 		F43453962A026EF400EFBCB8 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = F4B8C9A029FEFDC7005995AA /* Intents.intentdefinition */; };
-		F46431402A1055E800D7DE89 /* TimeTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464313F2A1055E800D7DE89 /* TimeTracker.swift */; };
-		F46431412A139F6E00D7DE89 /* TimeTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464313F2A1055E800D7DE89 /* TimeTracker.swift */; };
+		F46431402A1055E800D7DE89 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464313F2A1055E800D7DE89 /* Utils.swift */; };
+		F46431412A139F6E00D7DE89 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464313F2A1055E800D7DE89 /* Utils.swift */; };
 		F4947D6C2A0A404200F72301 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED7A1629FFFEFF004B2FF2 /* IntentHandler.swift */; };
 		F4947D702A0A79F400F72301 /* CountdownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4947D6F2A0A79F400F72301 /* CountdownButton.swift */; };
 		F4947D722A0A892B00F72301 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4947D712A0A892A00F72301 /* Settings.swift */; };
@@ -81,7 +81,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F464313F2A1055E800D7DE89 /* TimeTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTracker.swift; sourceTree = "<group>"; };
+		F464313F2A1055E800D7DE89 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		F4947D6F2A0A79F400F72301 /* CountdownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownButton.swift; sourceTree = "<group>"; };
 		F4947D712A0A892A00F72301 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		F4947D762A0AA26400F72301 /* rot.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = rot.jpeg; path = ../../rot.jpeg; sourceTree = "<group>"; };
@@ -192,7 +192,7 @@
 				F4ED7A3A2A00FB57004B2FF2 /* AppDelegate.swift */,
 				F4ED7A372A00F2C0004B2FF2 /* AppState.swift */,
 				F4947D712A0A892A00F72301 /* Settings.swift */,
-				F464313F2A1055E800D7DE89 /* TimeTracker.swift */,
+				F464313F2A1055E800D7DE89 /* Utils.swift */,
 				F498478029F01B5F00903C4F /* SettingsView.swift */,
 				F49666EC29EFF6C900D8E433 /* HomeView.swift */,
 				F498478229F01BD300903C4F /* StatisticsView.swift */,
@@ -433,7 +433,7 @@
 				F49666ED29EFF6C900D8E433 /* HomeView.swift in Sources */,
 				F4BD33DA2A1AA1D4007A9839 /* ChartView.swift in Sources */,
 				F424B9372A0D0AE000E049BE /* IntentHandler.swift in Sources */,
-				F46431402A1055E800D7DE89 /* TimeTracker.swift in Sources */,
+				F46431402A1055E800D7DE89 /* Utils.swift in Sources */,
 				F498478329F01BD300903C4F /* StatisticsView.swift in Sources */,
 				F498478129F01B5F00903C4F /* SettingsView.swift in Sources */,
 				F49666EF29EFF6D800D8E433 /* MyApp.swift in Sources */,
@@ -471,7 +471,7 @@
 				F43453922A026CB800EFBCB8 /* AppDelegate.swift in Sources */,
 				F43453962A026EF400EFBCB8 /* Intents.intentdefinition in Sources */,
 				F4947D6C2A0A404200F72301 /* IntentHandler.swift in Sources */,
-				F46431412A139F6E00D7DE89 /* TimeTracker.swift in Sources */,
+				F46431412A139F6E00D7DE89 /* Utils.swift in Sources */,
 				F4D23E042A026FE800670EA1 /* AppState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

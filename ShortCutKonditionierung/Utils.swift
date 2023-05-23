@@ -2,7 +2,7 @@ import Foundation
 import SwiftUI
 import UserNotifications
 
-public class TimeTracker {
+public class Utils {
     
     static let dailyUsageTime = 30 * 60
     
@@ -94,12 +94,12 @@ public class TimeTracker {
     
     public func scheduleNotification(for url: URL) {
         let usageTimeToday = getUsageTimeForToday(for: url)
-        let remainingTime = (TimeTracker.dailyUsageTime) - (Int(usageTimeToday) * 3600)
+        let remainingTime = (Utils.dailyUsageTime) - (Int(usageTimeToday) * 3600)
         let notificationTime = max(Int(remainingTime) - (UserDefaults.standard.integer(forKey: "notificationTime") * 60), 0)
 
         let content = UNMutableNotificationContent()
         content.title = "Attention!"
-        content.body = "The daily usage time of \(TimeTracker.dailyUsageTime / 60) minutes has almost been reached."
+        content.body = "The daily usage time of \(Utils.dailyUsageTime / 60) minutes has almost been reached."
 
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(notificationTime), repeats: false)
 
@@ -115,7 +115,7 @@ public class TimeTracker {
         let today = getDateKey()
         
         for (day, hours) in data.reversed() {
-            if hours > Double(TimeTracker.dailyUsageTime) / 3600 {
+            if hours > Double(Utils.dailyUsageTime) / 3600 {
                 break
             }
             if day != today {

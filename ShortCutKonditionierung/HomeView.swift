@@ -6,7 +6,7 @@ struct HomeView: View {
     @Binding private var selectedTab: Tabs
     @EnvironmentObject private var appState: AppState
     
-    let timeTracker = TimeTracker()
+    let utils = Utils()
         
     init(selectedTab: Binding<Tabs>) {
         _selectedTab = selectedTab
@@ -14,7 +14,7 @@ struct HomeView: View {
     
     var url: String {
             if appState.showShortcutView {
-                return timeTracker.urlStringToAlphabeticString(url: appState.openAppUrl)
+                return utils.urlStringToAlphabeticString(url: appState.openAppUrl)
             } else {
                 return UserDefaults.standard.string(forKey: "lastUpdatedTimeDataAppkey") ?? ""
             }
