@@ -33,7 +33,7 @@ struct HomeView: View {
                         Spacer()
                         
                     }) {
-                        Text("Information Text Here")
+                        Text("Die Funktionen unserer App wurden durch eine umfangreiche wissenschaftliche Studie validiert. Link zur Studie: .....")
                             .fontWeight(.bold)
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
                         }

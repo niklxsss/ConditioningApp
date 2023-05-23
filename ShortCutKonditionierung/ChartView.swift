@@ -36,7 +36,7 @@ public struct ChartView: View {
                     )
                     
                 }
-                .foregroundColor(Color.orange)
+                .foregroundColor(Color.blue)
                 /*.chartYAxis{
                     AxisMarks(position: .leading)
                 }

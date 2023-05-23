@@ -12,6 +12,7 @@ struct SettingsView: View {
         NavigationView {
             VStack {
                 List {
+                    
                     Section(header: Text("General Settings")) {
                         HStack {
                             Text("Timer Duration")
@@ -19,6 +20,7 @@ struct SettingsView: View {
                             Stepper("\(settings.timerDuration) seconds", value: $settings.timerDuration, in: 1...60)
                         }
                     }
+
                     NavigationLink(destination: NotificationsSettingsView()) {
                         HStack {
                             Text("notifications")

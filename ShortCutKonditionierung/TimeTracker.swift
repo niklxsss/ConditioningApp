@@ -4,6 +4,7 @@ import UserNotifications
 
 public class TimeTracker {
     
+    static let dailyUsageTime = 30 * 60
     
     func startTracking() -> Date {
         return Date()
@@ -17,8 +18,6 @@ public class TimeTracker {
         let urlString = urlStringToAlphabeticString(url: url)
         var timeData = UserDefaults.standard.dictionary(forKey: urlString) as? [String: Double] ?? [String: Double]()
         let dateKey = getDateKey()
-        print(timeData)
-        print(dateKey)
         let previousTime = timeData[dateKey] ?? 0
         timeData[dateKey] = previousTime + timeSpent/3600
         UserDefaults.standard.setValue(timeData, forKey: urlString)
@@ -95,12 +94,12 @@ public class TimeTracker {
     
     public func scheduleNotification(for url: URL) {
         let usageTimeToday = getUsageTimeForToday(for: url)
-        let remainingTime = (30 * 60) - (usageTimeToday * 3600)
+        let remainingTime = (TimeTracker.dailyUsageTime) - (Int(usageTimeToday) * 3600)
         let notificationTime = max(Int(remainingTime) - (UserDefaults.standard.integer(forKey: "notificationTime") * 60), 0)
 
         let content = UNMutableNotificationContent()
         content.title = "Attention!"
-        content.body = "The daily usage time of 30 minutes has almost been reached."
+        content.body = "The daily usage time of \(TimeTracker.dailyUsageTime / 60) minutes has almost been reached."
 
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(notificationTime), repeats: false)
 
@@ -108,24 +107,26 @@ public class TimeTracker {
 
         UNUserNotificationCenter.current().add(request)
     }
+
+
     
     public func calculateStreak(data: [(day: String, hours: Double)]) -> Int {
         var streakCount = 0
         let today = getDateKey()
         
         for (day, hours) in data.reversed() {
-            if hours > 0.5 {
+            if hours > Double(TimeTracker.dailyUsageTime) / 3600 {
                 break
             }
-            if day == today {
-                
-            }
-            else {
+            if day != today {
                 streakCount += 1
             }
         }
+
         return streakCount
     }
+
+
     
     func createTestData() {
         let dummyURL = URL(string: "a1test")!

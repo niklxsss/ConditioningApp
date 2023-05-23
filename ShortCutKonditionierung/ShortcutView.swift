@@ -87,7 +87,7 @@ struct ShortcutView: View {
         }
 
         func startBreathAnimation() {
-            withAnimation(Animation.easeInOut(duration: 1.8).repeatForever(autoreverses: true)) {
+            withAnimation(Animation.easeInOut(duration: 2.1).repeatForever(autoreverses: true)) {
                 breathAnimationScale = breathAnimationScale == 1.0 ? 0.6 : 1.0
             }
         }
@@ -110,28 +110,29 @@ struct ShortcutView: View {
     
     @ViewBuilder
     private func showRandomWarningTextView() -> some View {
-        if let randomInfoText = settings.infoTexts.randomElement() {
+        if let randomInfoText = settings.infoTextsShortcut.randomElement() {
+            
             ZStack {
-                Color.gray
+                Color.white
                     .frame(width: 375, height: 375)
                     .cornerRadius(10)
                 
                 Text(randomInfoText)
-                    .font(.body)
+                    .font(.title2)
                     .padding()
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                     .multilineTextAlignment(.center)
             }
         } else {
             ZStack {
-                Color.gray
+                Color.white
                     .frame(width: 375, height: 375)
                     .cornerRadius(10)
                 
                 Text("No info text available")
-                    .font(.body)
+                    .font(.title2)
                     .padding()
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                     .multilineTextAlignment(.center)
             }
         }
