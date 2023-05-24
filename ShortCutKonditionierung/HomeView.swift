@@ -28,19 +28,37 @@ struct HomeView: View {
                     
                     Spacer()
                     
-                    GroupBox(label: HStack {
-                        Text("info").fontWeight(.bold)
-                        Spacer()
-                        
-                    }) {
-                        Text("Die Funktionen unserer App wurden durch eine umfangreiche wissenschaftliche Studie validiert. Link zur Studie: .....")
-                            .fontWeight(.bold)
+                    GroupBox {
+                        VStack {
+                            HStack {
+                                Text("Info")
+                                    .fontWeight(.bold)
+                                    .font(.headline)
+                                    .foregroundColor(.primary)
+                                Spacer()
+                            }
+                            .padding(.horizontal)
+                            
+                            Divider()
+                            
+                            VStack {
+                                Text("Die Funktionen unserer App wurden durch eine umfangreiche wissenschaftliche Studie validiert. Link zur Studie: .....")
+                                    .fontWeight(.medium)
+                                    .font(.body)
+                                    .foregroundColor(.secondary)
+                                    .multilineTextAlignment(.leading)
+                                    .padding(.top)
+                            }
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .padding(.horizontal)
                         }
-                        .frame(width: 375, height: 390)
+                        
+                    }.frame(width: 375, height: 390)
                         .background(Color.gray.opacity(0.1))
                         .cornerRadius(10)
                         .padding(.bottom)
+                        .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
+
                     
                     NavigationBar(selectedTab: $selectedTab)
                     
