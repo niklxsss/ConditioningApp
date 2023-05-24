@@ -9,8 +9,10 @@ public struct ChartView: View {
         let dataDict = UserDefaults.standard.dictionary(forKey: url) as? [String: Double]
         
         GroupBox(label: HStack {
+            
             Text(url).fontWeight(.bold)
             Spacer()
+            
             if let dataDict = dataDict {
                 
                 let data: [(day: String, hours: Double)] = Array(dataDict)
@@ -29,7 +31,10 @@ public struct ChartView: View {
                     .map { (day: $0.key, hours: $0.value) }
                     .sorted { $0.day < $1.day }
                 
-                Chart(data, id: \.day){
+                let lastSevenDaysData = Array(data.suffix(7))
+                let paddedData = Utils.padDataWithZeroHourstoChartdataIfNeeded(lastSevenDaysData)
+                
+                Chart(paddedData, id: \.day){
                     BarMark(
                         x: .value("day", $0.day),
                         y: .value("hour", $0.hours)
@@ -37,16 +42,6 @@ public struct ChartView: View {
                     
                 }
                 .foregroundColor(Color.blue)
-                /*.chartYAxis{
-                    AxisMarks(position: .leading)
-                }
-                .chartXAxis{
-                    AxisMark (values: .stride (by: .day)) { value in
-                        AxisGridLine().foregroundStyle(.orange)
-                        AxisValueLabel(format: .dateTime.weekday(),centered: true)
-                    }
-                   
-                }*/
                 
             } else {
                 Text("no data available")
@@ -60,4 +55,3 @@ public struct ChartView: View {
         .padding(.bottom)
     }
 }
-

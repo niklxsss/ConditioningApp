@@ -20,17 +20,19 @@ struct SettingsView: View {
                             Stepper("\(settings.timerDuration) seconds", value: $settings.timerDuration, in: 1...60)
                         }
                     }
+                    
+                    NavigationLink(destination: InfoSettingsView()) {
+                        HStack {
+                            Text("info")
+                        }
+                    }
 
                     NavigationLink(destination: NotificationsSettingsView()) {
                         HStack {
                             Text("notifications")
                         }
                     }
-                    NavigationLink(destination: BreatheSettingsView()) {
-                        HStack {
-                            Text("breathe")
-                        }
-                    }
+                    
                     NavigationLink(destination: ShockPictureSettingsView()) {
                         HStack {
                             Text("shock picture")
@@ -65,10 +67,10 @@ struct NotificationsSettingsView: View {
 }
 
 
-struct BreatheSettingsView: View {
+struct InfoSettingsView: View {
     var body: some View {
-        Text("Conditioning Methods Settings View")
-            .navigationBarTitle(Text("conditioning methods"))
+        Text("info")
+            .navigationBarTitle(Text("info"))
     }
 }
 

@@ -17,7 +17,7 @@ public class Utils {
     func saveTimeSpent(_ timeSpent: TimeInterval, for url: URL) {
         let urlString = urlStringToAlphabeticString(url: url)
         var timeData = UserDefaults.standard.dictionary(forKey: urlString) as? [String: Double] ?? [String: Double]()
-        let dateKey = getDateKey()
+        let dateKey = getStingFromDate()
         let previousTime = timeData[dateKey] ?? 0
         timeData[dateKey] = previousTime + timeSpent/3600
         UserDefaults.standard.setValue(timeData, forKey: urlString)
@@ -59,18 +59,6 @@ public class Utils {
         }
     }
     
-    func getDateFromKey(dateKey: String) -> Date? {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        return formatter.date(from: dateKey)
-    }
-    
-    func getDateKey(from date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        return formatter.string(from: date)
-    }
-    
     func urlStringToAlphabeticString(url: URL) -> String {
         let urlString = url.absoluteString
         let allowedCharacterSet = CharacterSet.letters
@@ -78,16 +66,10 @@ public class Utils {
         return resultString
     }
     
-    func getDateKey() -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        return formatter.string(from: Date())
-    }
-    
     func getUsageTimeForToday(for url: URL) -> Double {
         let urlString = urlStringToAlphabeticString(url: url)
         let timeData = UserDefaults.standard.dictionary(forKey: urlString) as? [String: Double] ?? [String: Double]()
-        let dateKey = getDateKey()
+        let dateKey = getStingFromDate()
         let usageTimeToday = timeData[dateKey] ?? 0
         return usageTimeToday
     }
@@ -100,19 +82,22 @@ public class Utils {
         let content = UNMutableNotificationContent()
         content.title = "Attention!"
         content.body = "The daily usage time of \(Utils.dailyUsageTime / 60) minutes has almost been reached."
+        content.sound = UNNotificationSound.default
 
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(notificationTime), repeats: false)
-
+        
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
 
-        UNUserNotificationCenter.current().add(request)
+        UNUserNotificationCenter.current().add(request) { (error) in
+            if let error = error {
+                print("Error scheduling notification: \(error)")
+            }
+        }
     }
-
-
     
     public func calculateStreak(data: [(day: String, hours: Double)]) -> Int {
         var streakCount = 0
-        let today = getDateKey()
+        let today = getStingFromDate()
         
         for (day, hours) in data.reversed() {
             if hours > Double(Utils.dailyUsageTime) / 3600 {
@@ -122,14 +107,86 @@ public class Utils {
                 streakCount += 1
             }
         }
-
         return streakCount
     }
 
+    static func padDataWithZeroHourstoChartdataIfNeeded(_ data: [(day: String, hours: Double)]) -> [(day: String, hours: Double)] {
+        
+            guard !data.isEmpty else {
+                return []
+            }
 
+            var paddedData = data
+            while paddedData.count < 7 {
+                let lastDateString = paddedData.last?.day ?? ""
+                guard let lastDate = Utils.getDateFromString(dateKey: lastDateString) else {
+                    print("Error: Unable to parse date from string.")
+                    break
+                }
+                let nextDate = Calendar.current.date(byAdding: .day, value: 1, to: lastDate)!
+                let nextDateString = Utils.formatDateToStringForStorage(nextDate)
+                paddedData.append((day: nextDateString, hours: 0))
+            }
+
+            return paddedData.map { (day, hours) in
+                let date = Utils.getDateFromString(dateKey: day)!
+                let dateString = Utils.formatDateToStringForChart(date)
+                return (day: dateString, hours: hours)
+            }
+        }
+    
+    static func formatDateToStringForChart(_ date: Date) -> String {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "MMM d"
+            return formatter.string(from: date)
+    }
+    
+    static func formatDateToStringForStorage(_ date: Date) -> String {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd"
+            return formatter.string(from: date)
+        }
+    
+    static func getDateFromString(dateKey: String) -> Date? {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter.date(from: dateKey)
+    }
+    
+    func getStingFromDate() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter.string(from: Date())
+    }
+    
+    public static func formatStringToDateForChart(_ str: String) -> Date {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d"
+        return formatter.date(from: str) ?? Date()
+    }
+    
+    public static func stringToDateForChart(_ str: String) -> Date {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d"
+        guard let date = formatter.date(from: str) else {
+            fatalError("Invalid date string")
+        }
+        return date
+    }
+    
+    func formatDateToStringForChart(_ str: String) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        if let date = formatter.date(from: str) {
+            formatter.dateFormat = "MMM d"
+            return formatter.string(from: date)
+        } else {
+            return ""
+        }
+    }
     
     func createTestData() {
-        let dummyURL = URL(string: "a1test")!
+        let dummyURL = URL(string: "test")!
         let dummyURLString = urlStringToAlphabeticString(url: dummyURL)
         var dummyData = [String: Double]()
         

@@ -52,6 +52,7 @@ struct CountdownButton: View {
             }
         }
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+            
             if let startTime = startTime {
                 let timeSpent = utils.calculateTimeSpent(from: startTime)
                 utils.saveTimeSpent(timeSpent, for: originalAppURL)
