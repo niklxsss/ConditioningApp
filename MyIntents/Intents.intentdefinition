@@ -38,7 +38,7 @@
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
-					<string>Zeigt den Say Hello-Bildschirm vor ${appURL} an.</string>
+					<string>Zeigt den SayHello-Shortcut vor ${appURL} an.</string>
 					<key>INIntentParameterCombinationTitleID</key>
 					<string>5O53ig</string>
 					<key>INIntentParameterCombinationUpdatesLinked</key>
@@ -61,7 +61,7 @@
 					<key>INIntentParameterMetadata</key>
 					<dict>
 						<key>INIntentParameterMetadataDefaultValue</key>
-						<string>dummy://</string>
+						<string>noURL</string>
 					</dict>
 					<key>INIntentParameterName</key>
 					<string>appURL</string>
@@ -135,7 +135,7 @@
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
-					<string>catch a breath</string>
+					<string>Zeigt den CatchABreath-Shortcut vor ${appURL} an.</string>
 					<key>INIntentParameterCombinationTitleID</key>
 					<string>97Vnhi</string>
 					<key>INIntentParameterCombinationUpdatesLinked</key>
@@ -158,7 +158,7 @@
 					<key>INIntentParameterMetadata</key>
 					<dict>
 						<key>INIntentParameterMetadataDefaultValue</key>
-						<string>dummy://</string>
+						<string>noURL</string>
 					</dict>
 					<key>INIntentParameterName</key>
 					<string>appURL</string>
@@ -226,7 +226,7 @@
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
-					<string>shocking pictures</string>
+					<string>Zeigt den ShockingPictures-Shortcut vor ${appURL} an.</string>
 					<key>INIntentParameterCombinationTitleID</key>
 					<string>xhVz7w</string>
 					<key>INIntentParameterCombinationUpdatesLinked</key>
@@ -249,7 +249,7 @@
 					<key>INIntentParameterMetadata</key>
 					<dict>
 						<key>INIntentParameterMetadataDefaultValue</key>
-						<string>dummy://</string>
+						<string>noURL</string>
 					</dict>
 					<key>INIntentParameterName</key>
 					<string>appURL</string>
@@ -321,7 +321,7 @@
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
-					<string>Zeigt den Say Hello-Bildschirm vor ${appURL} an.</string>
+					<string>Zeigt den WarningByText-Shortcut vor ${appURL} an.</string>
 					<key>INIntentParameterCombinationTitleID</key>
 					<string>vL2O74</string>
 					<key>INIntentParameterCombinationUpdatesLinked</key>
@@ -344,7 +344,7 @@
 					<key>INIntentParameterMetadata</key>
 					<dict>
 						<key>INIntentParameterMetadataDefaultValue</key>
-						<string>dummy://</string>
+						<string>noURL</string>
 					</dict>
 					<key>INIntentParameterName</key>
 					<string>appURL</string>

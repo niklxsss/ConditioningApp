@@ -6,7 +6,7 @@ public class AppState: ObservableObject {
     @Published public var showShortcutView = false
     @Published public var launchedAsShortcut = false
     @Published public var selectedShortcut: ShortcutType?
-    @Published public var openAppUrl: URL = URL(string: "dummy://")!
+    @Published public var openAppUrl: URL = URL(string: "noURL")!
     
 }
 

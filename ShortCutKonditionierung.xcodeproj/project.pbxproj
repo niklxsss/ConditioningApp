@@ -20,9 +20,6 @@
 		F4947D6C2A0A404200F72301 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED7A1629FFFEFF004B2FF2 /* IntentHandler.swift */; };
 		F4947D702A0A79F400F72301 /* CountdownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4947D6F2A0A79F400F72301 /* CountdownButton.swift */; };
 		F4947D722A0A892B00F72301 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4947D712A0A892A00F72301 /* Settings.swift */; };
-		F4947D772A0AA26400F72301 /* rot.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F4947D762A0AA26400F72301 /* rot.jpeg */; };
-		F4947D792A0B88C900F72301 /* rot1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F4947D782A0B88C900F72301 /* rot1.jpeg */; };
-		F4947D7B2A0B894800F72301 /* rot2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F4947D7A2A0B894800F72301 /* rot2.jpeg */; };
 		F49666ED29EFF6C900D8E433 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49666EC29EFF6C900D8E433 /* HomeView.swift */; };
 		F49666EF29EFF6D800D8E433 /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49666EE29EFF6D800D8E433 /* MyApp.swift */; };
 		F49666F129EFF6EC00D8E433 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49666F029EFF6EC00D8E433 /* NavigationBar.swift */; };
@@ -84,9 +81,6 @@
 		F464313F2A1055E800D7DE89 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		F4947D6F2A0A79F400F72301 /* CountdownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownButton.swift; sourceTree = "<group>"; };
 		F4947D712A0A892A00F72301 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		F4947D762A0AA26400F72301 /* rot.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = rot.jpeg; path = ../../rot.jpeg; sourceTree = "<group>"; };
-		F4947D782A0B88C900F72301 /* rot1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = rot1.jpeg; path = ../../rot1.jpeg; sourceTree = "<group>"; };
-		F4947D7A2A0B894800F72301 /* rot2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = rot2.jpeg; path = ../../rot2.jpeg; sourceTree = "<group>"; };
 		F49666EB29EFF6C900D8E433 /* ShortCutKonditionierung-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShortCutKonditionierung-Bridging-Header.h"; sourceTree = "<group>"; };
 		F49666EC29EFF6C900D8E433 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F49666EE29EFF6D800D8E433 /* MyApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyApp.swift; sourceTree = "<group>"; };
@@ -149,21 +143,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F4947D732A0A9F9400F72301 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				F4947D7A2A0B894800F72301 /* rot2.jpeg */,
-				F4947D782A0B88C900F72301 /* rot1.jpeg */,
-				F4947D762A0AA26400F72301 /* rot.jpeg */,
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
 		F4B9B34929EFF52C002E34FD = {
 			isa = PBXGroup;
 			children = (
 				F4ED7A492A0124E6004B2FF2 /* MyIntents */,
-				F4947D732A0A9F9400F72301 /* Images */,
 				F4ED7A422A01242C004B2FF2 /* storage */,
 				F4B9B35429EFF52C002E34FD /* ShortCutKonditionierung */,
 				F4B9B36529EFF52E002E34FD /* ShortCutKonditionierungTests */,
@@ -389,10 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4B9B35D29EFF52E002E34FD /* Preview Assets.xcassets in Resources */,
-				F4947D7B2A0B894800F72301 /* rot2.jpeg in Resources */,
 				F4B9B35A29EFF52E002E34FD /* Assets.xcassets in Resources */,
-				F4947D772A0AA26400F72301 /* rot.jpeg in Resources */,
-				F4947D792A0B88C900F72301 /* rot1.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

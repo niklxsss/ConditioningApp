@@ -9,6 +9,7 @@ struct CountdownButton: View {
     @State private var timeRemaining: Int
     @State private var timerCompleted = false
     @State private var startTime: Date?
+    @State private var externalAppOpened = false
     
     let utils = Utils()
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -21,12 +22,9 @@ struct CountdownButton: View {
 
     var body: some View {
         Button(action: {
-            
-            utils.scheduleNotification(for: originalAppURL)
-            
-            if utils.urlStringToAlphabeticString(url: originalAppURL) != "dummy" {
-                    startTime = Date()
-                    UIApplication.shared.open(originalAppURL, options: [:], completionHandler: nil)
+            if utils.urlStringToAlphabeticString(url: originalAppURL) != "noURL" {
+                externalAppOpened = true
+                UIApplication.shared.open(originalAppURL, options: [:], completionHandler: nil)
             }
             
         }) {
@@ -35,6 +33,24 @@ struct CountdownButton: View {
                 .background(buttonEnabled || timerCompleted ? Color.blue : Color.gray)
                 .foregroundColor(.white)
                 .cornerRadius(10)
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.didEnterBackgroundNotification)) { _ in
+            if utils.urlStringToAlphabeticString(url: originalAppURL) != "noURL" && externalAppOpened {
+                self.startTime = Date()
+                utils.isAppInForeground = false
+                utils.scheduleNotification(for: originalAppURL)
+            }
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+            utils.isAppInForeground = true
+            if externalAppOpened {
+                if let startTime = startTime {
+                    let timeSpent = utils.calculateTimeSpent(from: startTime)
+                    utils.saveTimeSpent(timeSpent, for: originalAppURL)
+                    self.startTime = nil
+                }
+                externalAppOpened = false
+            }
         }
         .disabled(!buttonEnabled)
         .onAppear {
@@ -51,14 +67,7 @@ struct CountdownButton: View {
                 timer.upstream.connect().cancel()
             }
         }
-        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
-            
-            if let startTime = startTime {
-                let timeSpent = utils.calculateTimeSpent(from: startTime)
-                utils.saveTimeSpent(timeSpent, for: originalAppURL)
-                self.startTime = nil
-            }
-        }
+        
         .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
     }
     

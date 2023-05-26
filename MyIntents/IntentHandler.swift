@@ -20,34 +20,28 @@ class IntentHandler: INExtension, SayHelloIntentHandling, CatchABreathIntentHand
     
     func handle(intent: SayHelloIntent, completion: @escaping (SayHelloIntentResponse) -> Void) {
         print("handel sayhello")
-        AppState.shared.openAppUrl = intent.appURL ?? URL(string: "dummy://")!
-                
-        //let userActivity = NSUserActivity(activityType: NSStringFromClass(SayHelloIntent.self))
-            //userActivity.userInfo = ["intent": "sayHello"]
-            //let response = SayHelloIntentResponse(code: .continueInApp, userActivity: userActivity)
-            //self.completion = completion
+        AppState.shared.openAppUrl = intent.appURL ?? URL(string: "noURL")!
         let response = SayHelloIntentResponse(code: .continueInApp, userActivity: nil)
         completion(response)
-        //print(response)
     }
     
     func handle(intent: CatchABreathIntent, completion: @escaping (CatchABreathIntentResponse) -> Void) {
         print("handel catchABreath")
-        AppState.shared.openAppUrl = intent.appURL ?? URL(string: "dummy://")!
+        AppState.shared.openAppUrl = intent.appURL ?? URL(string: "noURL")!
         let response = CatchABreathIntentResponse(code: .continueInApp, userActivity: nil)
         completion(response)
     }
     
     func handle(intent: ShockingPicturesIntent, completion: @escaping (ShockingPicturesIntentResponse) -> Void) {
         print("handel shockingPictures")
-        AppState.shared.openAppUrl = intent.appURL ?? URL(string: "dummy://")!
+        AppState.shared.openAppUrl = intent.appURL ?? URL(string: "noURL")!
         let response = ShockingPicturesIntentResponse(code: .continueInApp, userActivity: nil)
         completion(response)
     }
     
     func handle(intent: WarningByTextIntent, completion: @escaping (WarningByTextIntentResponse) -> Void) {
         print("handel WarningByText")
-        AppState.shared.openAppUrl = intent.appURL ?? URL(string: "dummy://")!
+        AppState.shared.openAppUrl = intent.appURL ?? URL(string: "noURL")!
             
         let response = WarningByTextIntentResponse(code: .continueInApp, userActivity: nil)
         completion(response)

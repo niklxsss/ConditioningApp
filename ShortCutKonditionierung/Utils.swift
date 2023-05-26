@@ -4,7 +4,8 @@ import UserNotifications
 
 public class Utils {
     
-    static let dailyUsageTime = 30 * 60
+    var isAppInForeground: Bool = true
+    static let dailyUsageTimeInSec = 30 * 60
     
     func startTracking() -> Date {
         return Date()
@@ -76,22 +77,35 @@ public class Utils {
     
     public func scheduleNotification(for url: URL) {
         let usageTimeToday = getUsageTimeForToday(for: url)
-        let remainingTime = (Utils.dailyUsageTime) - (Int(usageTimeToday) * 3600)
-        let notificationTime = max(Int(remainingTime) - (UserDefaults.standard.integer(forKey: "notificationTime") * 60), 0)
-
-        let content = UNMutableNotificationContent()
-        content.title = "Attention!"
-        content.body = "The daily usage time of \(Utils.dailyUsageTime / 60) minutes has almost been reached."
-        content.sound = UNNotificationSound.default
-
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(notificationTime), repeats: false)
+        let remainingTime = max((Utils.dailyUsageTimeInSec) - (Int(usageTimeToday * 3600)), 0)
         
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        if remainingTime != 0 {
+            
+            let notificationTime = max(Int(remainingTime) - (UserDefaults.standard.integer(forKey: "notificationTime") * 60), 0)
 
-        UNUserNotificationCenter.current().add(request) { (error) in
-            if let error = error {
-                print("Error scheduling notification: \(error)")
+            if notificationTime != 0 {
+                
+                let content = UNMutableNotificationContent()
+                content.title = "Attention!"
+                content.body = "The daily usage time of \(Utils.dailyUsageTimeInSec / 60) minutes has almost been reached."
+                content.sound = UNNotificationSound.default
+
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(notificationTime), repeats: false)
+                
+                let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+
+                UNUserNotificationCenter.current().add(request) { [weak self] (error) in
+                        if self?.isAppInForeground == true {
+                            return
+                        }
+                        
+                        if let error = error {
+                            print("Error scheduling notification: \(error)")
+                        }
+                }
+                
             }
+            
         }
     }
     
@@ -100,7 +114,7 @@ public class Utils {
         let today = getStingFromDate()
         
         for (day, hours) in data.reversed() {
-            if hours > Double(Utils.dailyUsageTime) / 3600 {
+            if hours > Double(Utils.dailyUsageTimeInSec) / 3600 {
                 break
             }
             if day != today {

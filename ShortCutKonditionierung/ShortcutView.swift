@@ -17,7 +17,6 @@ struct ShortcutView: View {
         NavigationView {
             VStack {
                 
-                Spacer()
                 
                 if appState.selectedShortcut == .sayHello {
                         Text("Hello")
@@ -25,12 +24,14 @@ struct ShortcutView: View {
                             .foregroundColor(.blue)
                 }
                 else if appState.selectedShortcut == .catchABreath {
+                    Spacer()
                     breathAnimation()
                 }
                 else if appState.selectedShortcut == .shockPicture {
                     showSelectedImagesView()
                 }
                 else if appState.selectedShortcut == .warningByText {
+                    Spacer()
                     showRandomWarningTextView()
                 }
                 
@@ -100,13 +101,15 @@ struct ShortcutView: View {
             if let randomImage = settings.selectedImages.randomElement() {
                 Image(randomImage)
                     .resizable()
-                    .frame(width: 375, height: 375)
+                    .frame(width: 370, height: 555)
                     .cornerRadius(10)
+                    
             } else {
                 Text("No image selected")
             }
             }
         }
+        Spacer()
     }
     
     @ViewBuilder
