@@ -9,17 +9,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         print("App launched")
         checkAuthorizations()
+        utils.createTestData()
         utils.fillMissingDates()
         return true
     }
     
     func application(_ application: UIApplication, handlerFor intent: INIntent) -> Any? {
         switch intent {
-        case is SayHelloIntent:
-            
-            print("Handling SayHelloIntent")
-            openShortCutIntent(.sayHello)
-            return IntentHandler()
             
         case is CatchABreathIntent:
             print("Handling CatchABreathIntent")

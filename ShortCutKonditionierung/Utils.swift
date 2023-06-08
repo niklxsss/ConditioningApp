@@ -32,8 +32,6 @@ public class Utils {
             UserDefaults.standard.set(urlsList, forKey: "appsWithTimeData")
         }
         
-        createTestData()
-        
     }
     
     public func fillMissingDates() {
@@ -199,8 +197,19 @@ public class Utils {
         }
     }
     
+    func timeString(fromHours hours: Double) -> String {
+            let hourPart = Int(hours)
+            let minutePart = Int((hours - Double(hourPart)) * 60)
+
+            if hourPart > 0 {
+                return "\(hourPart) h \(minutePart) min"
+            } else {
+                return "\(minutePart) min"
+            }
+        }
+    
     func createTestData() {
-        let dummyURL = URL(string: "test")!
+        let dummyURL = URL(string: "testChart")!
         let dummyURLString = urlStringToAlphabeticString(url: dummyURL)
         var dummyData = [String: Double]()
         
@@ -208,7 +217,7 @@ public class Utils {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         
-        for i in 0..<50 {
+        for i in 0..<10 {
             let date = Calendar.current.date(byAdding: .day, value: -i, to: currentDate)!
             let dateKey = dateFormatter.string(from: date)
             dummyData[dateKey] = Double.random(in: 0...0.5)

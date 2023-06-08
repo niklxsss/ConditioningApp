@@ -17,13 +17,7 @@ struct ShortcutView: View {
         NavigationView {
             VStack {
                 
-                
-                if appState.selectedShortcut == .sayHello {
-                        Text("Hello")
-                            .font(.largeTitle)
-                            .foregroundColor(.blue)
-                }
-                else if appState.selectedShortcut == .catchABreath {
+                if appState.selectedShortcut == .catchABreath {
                     Spacer()
                     breathAnimation()
                 }

@@ -15,7 +15,6 @@
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>INIntentsSupported</key>
 	<array>
-		<string>SayHelloIntent</string>
 		<string>CatchABreathIntent</string>
 		<string>ShockingPicturesIntent</string>
 		<string>WarningByTextIntent</string>
@@ -47,7 +46,6 @@
 	<array>
 		<string>CatchABreathIntent</string>
 		<string>OpenAppIntent</string>
-		<string>SayHelloIntent</string>
 		<string>ShockingPicturesIntent</string>
 		<string>WarningByTextIntent</string>
 	</array>

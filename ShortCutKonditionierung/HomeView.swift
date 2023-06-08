@@ -42,7 +42,7 @@ struct HomeView: View {
                             Divider()
                             
                             VStack {
-                                Text("Die Funktionen unserer App wurden durch eine umfangreiche wissenschaftliche Studie validiert. Link zur Studie: .....")
+                                Text("A scientific study has shown that showing a shock image and a warning text before opening a social media app as a negative conditioning method significantly contributes to reducing usage time. \n\nLink to study:  \n\n\n\nMore information coming soon.")
                                     .fontWeight(.medium)
                                     .font(.body)
                                     .foregroundColor(.secondary)
@@ -68,5 +68,3 @@ struct HomeView: View {
             }
         }
 }
-
-//https://medium.com/@contact.jmeyers/complete-list-of-ios-url-schemes-for-apple-apps-and-services-always-updated-800c64f450f
