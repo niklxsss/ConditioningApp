@@ -2,7 +2,9 @@ import SwiftUI
 
 class Settings: ObservableObject {
     
-    static let picturesInt = 2
+    var picturesInt: Int {
+            return allImages.count - 2
+        }
     
     @Published var timerDuration: Int {
         didSet {
@@ -31,17 +33,9 @@ class Settings: ObservableObject {
         }
     }
     
-    @Published var allImages: [String] {
-        didSet {
-            saveAllImages()
-        }
-    }
-    
-    @Published var infoTextsShortcut: [String] {
-        didSet {
-            saveInfoTexts()
-        }
-    }
+    @Published var allImages: [String]
+        
+    @Published var infoTextsShortcut: [String]
     
     init() {
         let loadedTimerDuration = UserDefaults.standard.integer(forKey: "timerDuration")
@@ -57,38 +51,27 @@ class Settings: ObservableObject {
             self.selectedImages = []
         }
         
-        if let data = UserDefaults.standard.data(forKey: "allImages"),
-           let decodedImages = try? JSONDecoder().decode([String].self, from: data) {
-            self.allImages = decodedImages
-        } else {
-            self.allImages = ["rot","rot2","rot1"]
-        }
-        
-        if let savedTexts = UserDefaults.standard.array(forKey: "infoTexts") as? [String] {
-            self.infoTextsShortcut = savedTexts
-        } else {
-            self.infoTextsShortcut = [
-                "Die Nutzung von Social Media vor dem Schlafengehen kann zu Schlafstörungen und schlechter Schlafqualität führen.",
-                "Exzessive Nutzung von Social Media kann zu erhöhten Depressionen und Angstzuständen führen.",
-                "Die ständige Sorge, etwas Wichtiges oder Spaßiges zu verpassen, kann durch den Gebrauch von Social Media verstärkt werden.",
-                "Social Media ermöglicht Cybermobbing, das schwerwiegende psychische Folgen für die Opfer haben kann.",
-                "Die ständige Konfrontation mit perfekt inszenierten Bildern auf Social Media kann zu Selbstwertproblemen und Unzufriedenheit mit dem eigenen Leben führen.",
-                "Social Media kann süchtig machen und zu exzessivem Gebrauch führen, der andere Lebensbereiche beeinträchtigt.",
-                "Die Nutzung von Social Media birgt Risiken für die Privatsphäre und den Schutz persönlicher Daten.",
-                "Social Media kann ablenken und zu einem Verlust an Produktivität in Schule, Arbeit und Alltag führen.",
-                "Übermäßiger Gebrauch von Social Media kann zu sozialer Isolation und einem Mangel an echten menschlichen Interaktionen führen.",
-                "Social Media kann zur Verbreitung von Falschinformationen und Fake News beitragen, die reale Auswirkungen auf die Gesellschaft haben können."
-            ]
-        }
-        
-        
+        self.allImages = ["rot","rot2","rot1"]
+
+        self.infoTextsShortcut = [
+                    "Die Nutzung von Social Media vor dem Schlafengehen kann zu Schlafstörungen und schlechter Schlafqualität führen.",
+                    "Exzessive Nutzung von Social Media kann zu erhöhten Depressionen und Angstzuständen führen.",
+                    "Die ständige Sorge, etwas Wichtiges oder Spaßiges zu verpassen, kann durch den Gebrauch von Social Media verstärkt werden.",
+                    "Social Media ermöglicht Cybermobbing, das schwerwiegende psychische Folgen für die Opfer haben kann.",
+                    "Die ständige Konfrontation mit perfekt inszenierten Bildern auf Social Media kann zu Selbstwertproblemen und Unzufriedenheit mit dem eigenen Leben führen.",
+                    "Social Media kann süchtig machen und zu exzessivem Gebrauch führen, der andere Lebensbereiche beeinträchtigt.",
+                    "Die Nutzung von Social Media birgt Risiken für die Privatsphäre und den Schutz persönlicher Daten.",
+                    "Social Media kann ablenken und zu einem Verlust an Produktivität in Schule, Arbeit und Alltag führen.",
+                    "Übermäßiger Gebrauch von Social Media kann zu sozialer Isolation und einem Mangel an echten menschlichen Interaktionen führen.",
+                    "Social Media kann zur Verbreitung von Falschinformationen und Fake News beitragen, die reale Auswirkungen auf die Gesellschaft haben können."
+        ]
         
         updateSelectedImages()
     }
 
     func updateSelectedImages() {
-        if selectedImages.count < Settings.picturesInt {
-            let additionalImagesNeeded = Settings.picturesInt - selectedImages.count
+        if selectedImages.count < picturesInt {
+            let additionalImagesNeeded = picturesInt - selectedImages.count
             let remainingImages = allImages.filter { !selectedImages.contains($0) }
             
             if additionalImagesNeeded <= remainingImages.count {
