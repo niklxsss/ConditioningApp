@@ -7,6 +7,7 @@ public class AppState: ObservableObject {
     @Published public var launchedAsShortcut = false
     @Published public var selectedShortcut: ShortcutType?
     @Published public var openAppUrl: URL = URL(string: "noURL")!
+    @Published public var lastIntentExecution: Date?
     
 }
 

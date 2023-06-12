@@ -3,7 +3,7 @@ import SwiftUI
 class Settings: ObservableObject {
     
     var picturesInt: Int {
-            return allImages.count - 2
+            return allImages.count - 1
         }
     
     @Published var timerDuration: Int {
@@ -51,7 +51,7 @@ class Settings: ObservableObject {
             self.selectedImages = []
         }
         
-        self.allImages = ["rot","rot2","rot1"]
+        self.allImages = ["1","2","3","4","5","6"]
 
         self.infoTextsShortcut = [
                     "Die Nutzung von Social Media vor dem Schlafengehen kann zu Schlafstörungen und schlechter Schlafqualität führen.",

@@ -11,6 +11,8 @@ struct CountdownButton: View {
     @State private var startTime: Date?
     @State private var externalAppOpened = false
     
+    @EnvironmentObject private var appState: AppState
+    
     let utils = Utils()
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
@@ -25,6 +27,7 @@ struct CountdownButton: View {
             if utils.urlStringToAlphabeticString(url: originalAppURL) != "noURL" {
                 externalAppOpened = true
                 UIApplication.shared.open(originalAppURL, options: [:], completionHandler: nil)
+                self.appState.lastIntentExecution = Date()
             }
             
         }) {

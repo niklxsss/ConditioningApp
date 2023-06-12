@@ -34,6 +34,8 @@
 		F4B9B37129EFF52E002E34FD /* ShortCutKonditionierungUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B9B37029EFF52E002E34FD /* ShortCutKonditionierungUITests.swift */; };
 		F4B9B37329EFF52E002E34FD /* ShortCutKonditionierungUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B9B37229EFF52E002E34FD /* ShortCutKonditionierungUITestsLaunchTests.swift */; };
 		F4BD33DA2A1AA1D4007A9839 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD33D92A1AA1D4007A9839 /* ChartView.swift */; };
+		F4CDBEDE2A37AF6D00747A4B /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4CDBEDD2A37AF6D00747A4B /* Entitlements.plist */; };
+		F4CDBEDF2A37AF6D00747A4B /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4CDBEDD2A37AF6D00747A4B /* Entitlements.plist */; };
 		F4D23E042A026FE800670EA1 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED7A372A00F2C0004B2FF2 /* AppState.swift */; };
 		F4ED7A382A00F2C0004B2FF2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED7A372A00F2C0004B2FF2 /* AppState.swift */; };
 		F4ED7A3B2A00FB57004B2FF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED7A3A2A00FB57004B2FF2 /* AppDelegate.swift */; };
@@ -103,6 +105,7 @@
 		F4BD33D92A1AA1D4007A9839 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		F4CA3D7829FFD5FB00A75A4C /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		F4CA3D8329FFD5FB00A75A4C /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		F4CDBEDD2A37AF6D00747A4B /* Entitlements.plist */ = {isa = PBXFileReference; explicitFileType = text.plist.entitlements; path = Entitlements.plist; sourceTree = "<group>"; };
 		F4ED7A1629FFFEFF004B2FF2 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		F4ED7A372A00F2C0004B2FF2 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		F4ED7A3A2A00FB57004B2FF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -187,6 +190,7 @@
 				F4947D6F2A0A79F400F72301 /* CountdownButton.swift */,
 				F4B9B35929EFF52E002E34FD /* Assets.xcassets */,
 				F4B8A60629F8190B00AB9601 /* Info.plist */,
+				F4CDBEDD2A37AF6D00747A4B /* Entitlements.plist */,
 				F4B9B35B29EFF52E002E34FD /* Preview Content */,
 			);
 			path = ShortCutKonditionierung;
@@ -371,6 +375,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4CDBEDE2A37AF6D00747A4B /* Entitlements.plist in Resources */,
 				F4B9B35D29EFF52E002E34FD /* Preview Assets.xcassets in Resources */,
 				F4B9B35A29EFF52E002E34FD /* Assets.xcassets in Resources */,
 			);
@@ -394,6 +399,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4CDBEDF2A37AF6D00747A4B /* Entitlements.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
