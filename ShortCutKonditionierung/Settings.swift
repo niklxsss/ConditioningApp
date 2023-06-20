@@ -37,6 +37,12 @@ class Settings: ObservableObject {
         
     @Published var infoTextsShortcut: [String]
     
+    @Published var notificationsEnabled: Bool {
+            didSet {
+                UserDefaults.standard.set(notificationsEnabled, forKey: "notificationsEnabled")
+            }
+        }
+    
     init() {
         let loadedTimerDuration = UserDefaults.standard.integer(forKey: "timerDuration")
         self.timerDuration = loadedTimerDuration < 5 ? 10 : loadedTimerDuration
@@ -65,6 +71,7 @@ class Settings: ObservableObject {
                     "Übermäßiger Gebrauch von Social Media kann zu sozialer Isolation und einem Mangel an echten menschlichen Interaktionen führen.",
                     "Social Media kann zur Verbreitung von Falschinformationen und Fake News beitragen, die reale Auswirkungen auf die Gesellschaft haben können."
         ]
+        self.notificationsEnabled = UserDefaults.standard.bool(forKey: "notificationsEnabled")
         
         updateSelectedImages()
     }

@@ -74,6 +74,12 @@ public class Utils {
     }
     
     public func scheduleNotification(for url: URL) {
+        let notificationsEnabled = UserDefaults.standard.bool(forKey: "notificationsEnabled")
+
+        guard notificationsEnabled else {
+            return
+        }
+        
         let usageTimeToday = getUsageTimeForToday(for: url)
         let remainingTime = max((Utils.dailyUsageTimeInSec) - (Int(usageTimeToday * 3600)), 0)
         

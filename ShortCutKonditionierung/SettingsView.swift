@@ -58,6 +58,11 @@ struct NotificationsSettingsView: View {
     
     var body: some View {
         List {
+            Section(header: Text("Notification Toggle")) {
+                            Toggle(isOn: $settings.notificationsEnabled) {
+                                Text("Enable Notifications")
+                            }
+                        }
             Picker(selection: $settings.notificationTime, label: Text("Notification time before streak ends")) {
                 ForEach(notificationTimes, id: \.self) {
                     Text("\($0) mins")
