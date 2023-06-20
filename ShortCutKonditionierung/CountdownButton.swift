@@ -54,12 +54,11 @@ struct CountdownButton: View {
                 }
                 externalAppOpened = false
             }
+            resetTimer()
         }
         .disabled(!buttonEnabled)
         .onAppear {
-            if !timerCompleted {
-                startTimer()
-            }
+            resetTimer()
         }
         .onReceive(timer) { _ in
             if timeRemaining > 0 {
@@ -67,7 +66,7 @@ struct CountdownButton: View {
             } else {
                 buttonEnabled = true
                 timerCompleted = true
-                timer.upstream.connect().cancel()
+                //timer.upstream.connect().cancel()
             }
         }
         
@@ -77,6 +76,11 @@ struct CountdownButton: View {
     func startTimer() {
         buttonEnabled = false
         timeRemaining = timerDuration
+    }
+    
+    func resetTimer() {
+        timerCompleted = false
+        startTimer()
     }
     
 }

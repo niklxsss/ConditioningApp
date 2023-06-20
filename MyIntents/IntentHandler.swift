@@ -22,7 +22,7 @@ class IntentHandler: INExtension, CatchABreathIntentHandling, ShockingPicturesIn
             let response = CatchABreathIntentResponse(code: .success, userActivity: nil)
             completion(response)
         } else {
-            print("handel catchABreath")
+            print("handle catchABreath")
             AppState.shared.openAppUrl = intent.appURL ?? URL(string: "noURL")!
             let response = CatchABreathIntentResponse(code: .continueInApp, userActivity: nil)
             completion(response)
@@ -35,7 +35,7 @@ class IntentHandler: INExtension, CatchABreathIntentHandling, ShockingPicturesIn
             let response = ShockingPicturesIntentResponse(code: .success, userActivity: nil)
             completion(response)
         } else {
-            print("handel shockingPictures")
+            print("handle shockingPictures")
             AppState.shared.openAppUrl = intent.appURL ?? URL(string: "noURL")!
             let response = ShockingPicturesIntentResponse(code: .continueInApp, userActivity: nil)
             completion(response)
@@ -47,7 +47,7 @@ class IntentHandler: INExtension, CatchABreathIntentHandling, ShockingPicturesIn
             let response = WarningByTextIntentResponse(code: .success, userActivity: nil)
             completion(response)
         } else {
-            print("handel WarningByText")
+            print("handle WarningByText")
             AppState.shared.openAppUrl = intent.appURL ?? URL(string: "noURL")!
             let response = WarningByTextIntentResponse(code: .continueInApp, userActivity: nil)
             completion(response)
