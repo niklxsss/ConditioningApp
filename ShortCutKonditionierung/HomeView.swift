@@ -42,7 +42,7 @@ struct HomeView: View {
                             Divider()
                             
                             VStack {
-                                Text("A scientific study has shown that showing a shock image and a warning text before opening a social media app as a negative conditioning method significantly contributes to reducing usage time. \n\n\n\nMore information coming soon.")
+                                Text("A scientific study conducted at the Technical University of Applied Sciences Würzburg-Schweinfurt (THWS) has demonstrated that employing negative conditioning methods, such as displaying a shocking image and a warning text prior to accessing a social media app, significantly contributes to reducing usage time. \n\nMore information will be provided soon.")
                                     .fontWeight(.medium)
                                     .font(.body)
                                     .foregroundColor(.secondary)

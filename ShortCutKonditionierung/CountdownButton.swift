@@ -25,9 +25,11 @@ struct CountdownButton: View {
     var body: some View {
         Button(action: {
             if utils.urlStringToAlphabeticString(url: originalAppURL) != "noURL" {
+                if timerCompleted && buttonEnabled {
+                    self.appState.lastIntentExecution = Date()
+                }
                 externalAppOpened = true
                 UIApplication.shared.open(originalAppURL, options: [:], completionHandler: nil)
-                self.appState.lastIntentExecution = Date()
             }
             
         }) {
@@ -66,7 +68,6 @@ struct CountdownButton: View {
             } else {
                 buttonEnabled = true
                 timerCompleted = true
-                //timer.upstream.connect().cancel()
             }
         }
         
