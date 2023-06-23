@@ -41,6 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DispatchQueue.main.async {
             self.appState.showShortcutView = true
             self.appState.selectedShortcut = shortcut
+            self.appState.launchedAsShortcut = false
         }
     }
     
