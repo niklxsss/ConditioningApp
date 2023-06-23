@@ -105,6 +105,7 @@
 		F4CA3D8329FFD5FB00A75A4C /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		F4E3378C2A45941E00568CEE /* ShortCutKonditionierungRelease.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = ShortCutKonditionierungRelease.entitlements; sourceTree = "<group>"; };
 		F4E3378E2A4597A800568CEE /* ShortCutKonditionierung.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = ShortCutKonditionierung.entitlements; sourceTree = "<group>"; };
+		F4E3378F2A459D0600568CEE /* MyIntents.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = MyIntents.entitlements; sourceTree = "<group>"; };
 		F4ED7A1629FFFEFF004B2FF2 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		F4ED7A372A00F2C0004B2FF2 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		F4ED7A3A2A00FB57004B2FF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -243,6 +244,7 @@
 				F4B8C9A029FEFDC7005995AA /* Intents.intentdefinition */,
 				F4ED7A1629FFFEFF004B2FF2 /* IntentHandler.swift */,
 				F4ED7A4C2A0124E6004B2FF2 /* Info.plist */,
+				F4E3378F2A459D0600568CEE /* MyIntents.entitlements */,
 			);
 			path = MyIntents;
 			sourceTree = "<group>";
