@@ -14,8 +14,7 @@
 			<array/>
 			<key>IntentsSupported</key>
 			<array>
-				<string>SayHelloIntent</string>
-				<string>OpenAppIntent</string>
+				<string>WarningByTextIntent</string>
 				<string>CatchABreathIntent</string>
 				<string>ShockingPicturesIntent</string>
 			</array>
@@ -27,8 +26,7 @@
 	</dict>
 	<key>NSUserActivityTypes</key>
 	<array>
-		<string>SayHelloIntent</string>
-		<string>OpenAppIntent</string>
+		<string>WarningByTextIntent</string>
 		<string>CatchABreathIntent</string>
 		<string>ShockingPicturesIntent</string>
 	</array>
