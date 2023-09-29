@@ -9,8 +9,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         print("App launched")
         checkAuthorizations()
-        utils.createTestData()
-        utils.fillMissingDates()
         return true
     }
     

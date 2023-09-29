@@ -13,13 +13,7 @@ struct StatisticsView: View {
         NavigationView {
             VStack{
                 VStack {
-                    ScrollView {
-                        let urlsList = UserDefaults.standard.array(forKey: "appsWithTimeData") as? [String] ?? [String]()
-                        
-                        ForEach(urlsList.sorted(), id: \.self) { url in
-                            ChartView(url: url)
-                        }
-                    }
+                    
                     Spacer()
                     
                     NavigationBar(selectedTab: $selectedTab)
@@ -28,13 +22,5 @@ struct StatisticsView: View {
                 .navigationBarTitle(Text("statistics"), displayMode: .inline)
             }
         }
-    }
-}
-
-struct StatisticsView_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        
-        StatisticsView(selectedTab: .constant(.statistics))
     }
 }

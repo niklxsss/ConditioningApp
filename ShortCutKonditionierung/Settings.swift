@@ -2,10 +2,6 @@ import SwiftUI
 
 class Settings: ObservableObject {
     
-    var picturesInt: Int {
-            return allImages.count - 1
-        }
-    
     @Published var timerDuration: Int {
         didSet {
             if timerDuration < 5 {
@@ -26,13 +22,6 @@ class Settings: ObservableObject {
         }
     }
     
-    @Published var selectedImages: [String] {
-        didSet {
-            saveSelectedImages()
-            updateSelectedImages()
-        }
-    }
-    
     @Published var allImages: [String]
         
     @Published var infoTextsShortcut: [String]
@@ -50,13 +39,6 @@ class Settings: ObservableObject {
         let loadedNotificationTime = UserDefaults.standard.integer(forKey: "notificationTime")
         self.notificationTime = loadedNotificationTime < 1 || loadedNotificationTime > 29 ? 5 : loadedNotificationTime
         
-        if let data = UserDefaults.standard.data(forKey: "selectedImages"),
-           let decodedImages = try? JSONDecoder().decode([String].self, from: data) {
-            self.selectedImages = decodedImages
-        } else {
-            self.selectedImages = []
-        }
-        
         self.allImages = ["1","2","3","4","5","6"]
 
         self.infoTextsShortcut = [
@@ -71,33 +53,8 @@ class Settings: ObservableObject {
                     "Übermäßiger Gebrauch von Social Media kann zu sozialer Isolation und einem Mangel an echten menschlichen Interaktionen führen.",
                     "Social Media kann zur Verbreitung von Falschinformationen und Fake News beitragen, die reale Auswirkungen auf die Gesellschaft haben können."
         ]
-        self.notificationsEnabled = UserDefaults.standard.bool(forKey: "notificationsEnabled")
         
-        updateSelectedImages()
-    }
-
-    func updateSelectedImages() {
-        if selectedImages.count < picturesInt {
-            let additionalImagesNeeded = picturesInt - selectedImages.count
-            let remainingImages = allImages.filter { !selectedImages.contains($0) }
-            
-            if additionalImagesNeeded <= remainingImages.count {
-                for _ in 0..<additionalImagesNeeded {
-                    if let randomImage = remainingImages.randomElement() {
-                        selectedImages.append(randomImage)
-                    }
-                }
-            } else {
-                selectedImages.append(contentsOf: remainingImages)
-            }
-            
-            saveSelectedImages()
-        }
-    }
-
-    func saveSelectedImages() {
-        let encodedData = try? JSONEncoder().encode(selectedImages)
-        UserDefaults.standard.set(encodedData, forKey: "selectedImages")
+        self.notificationsEnabled = UserDefaults.standard.bool(forKey: "notificationsEnabled")
     }
 
     func saveAllImages() {

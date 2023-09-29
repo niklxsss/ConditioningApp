@@ -1,4 +1,4 @@
-import SwiftUI
+/*import SwiftUI
 import Charts
 
 public struct ChartView: View {
@@ -8,6 +8,7 @@ public struct ChartView: View {
     @State private var isFlipped = false
     @State private var isZoomed = false
 
+    
     public var body: some View {
         let dataDict = UserDefaults.standard.dictionary(forKey: url) as? [String: Double]
         
@@ -115,3 +116,4 @@ public struct ChartView: View {
     }
    
 }
+*/

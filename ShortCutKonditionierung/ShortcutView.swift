@@ -92,7 +92,7 @@ struct ShortcutView: View {
     private func showSelectedImagesView() -> some View {
         Group {
             VStack{
-            if let randomImage = settings.selectedImages.randomElement() {
+                if let randomImage = settings.allImages.randomElement() {
                 Image(randomImage)
                     .resizable()
                     .frame(width: 370, height: 555)
@@ -137,13 +137,4 @@ struct ShortcutView: View {
     }
 
 
-}
-
-
-struct ShortcutView_Previews: PreviewProvider {
-    static var previews: some View {
-        ShortcutView(selectedTab: .constant(.shortcut))
-            .environmentObject(AppState.shared)
-            .environmentObject(Settings())
-    }
 }

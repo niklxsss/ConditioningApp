@@ -41,19 +41,12 @@ struct CountdownButton: View {
         }
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.didEnterBackgroundNotification)) { _ in
             if utils.urlStringToAlphabeticString(url: originalAppURL) != "noURL" && externalAppOpened {
-                self.startTime = Date()
                 utils.isAppInForeground = false
-                utils.scheduleNotification(for: originalAppURL)
             }
         }
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
             utils.isAppInForeground = true
             if externalAppOpened {
-                if let startTime = startTime {
-                    let timeSpent = utils.calculateTimeSpent(from: startTime)
-                    utils.saveTimeSpent(timeSpent, for: originalAppURL)
-                    self.startTime = nil
-                }
                 externalAppOpened = false
             }
             resetTimer()
