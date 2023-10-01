@@ -38,6 +38,8 @@
 		F4ED7A382A00F2C0004B2FF2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED7A372A00F2C0004B2FF2 /* AppState.swift */; };
 		F4ED7A3B2A00FB57004B2FF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED7A3A2A00FB57004B2FF2 /* AppDelegate.swift */; };
 		F4ED7A482A0124E6004B2FF2 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4CA3D7829FFD5FB00A75A4C /* Intents.framework */; };
+		F4F94A5F2AC99310005C47E1 /* AppType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F94A5E2AC99310005C47E1 /* AppType.swift */; };
+		F4F94A602AC99B91005C47E1 /* AppType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F94A5E2AC99310005C47E1 /* AppType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,7 @@
 		F4ED7A3A2A00FB57004B2FF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4ED7A472A0124E6004B2FF2 /* MyIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4ED7A4C2A0124E6004B2FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4F94A5E2AC99310005C47E1 /* AppType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +246,7 @@
 			children = (
 				F4B8C9A029FEFDC7005995AA /* Intents.intentdefinition */,
 				F4ED7A1629FFFEFF004B2FF2 /* IntentHandler.swift */,
+				F4F94A5E2AC99310005C47E1 /* AppType.swift */,
 				F4ED7A4C2A0124E6004B2FF2 /* Info.plist */,
 				F4E3378F2A459D0600568CEE /* MyIntents.entitlements */,
 			);
@@ -419,6 +423,7 @@
 				F49666ED29EFF6C900D8E433 /* HomeView.swift in Sources */,
 				F4BD33DA2A1AA1D4007A9839 /* ChartView.swift in Sources */,
 				F424B9372A0D0AE000E049BE /* IntentHandler.swift in Sources */,
+				F4F94A602AC99B91005C47E1 /* AppType.swift in Sources */,
 				F46431402A1055E800D7DE89 /* Utils.swift in Sources */,
 				F498478329F01BD300903C4F /* StatisticsView.swift in Sources */,
 				F498478129F01B5F00903C4F /* SettingsView.swift in Sources */,
@@ -455,6 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F43453922A026CB800EFBCB8 /* AppDelegate.swift in Sources */,
+				F4F94A5F2AC99310005C47E1 /* AppType.swift in Sources */,
 				F43453962A026EF400EFBCB8 /* Intents.intentdefinition in Sources */,
 				F4947D6C2A0A404200F72301 /* IntentHandler.swift in Sources */,
 				F46431412A139F6E00D7DE89 /* Utils.swift in Sources */,
@@ -616,7 +622,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ShortCutKonditionierung/Info.plist;
-				INFOPLIST_KEY_NSSiriUsageDescription = "needed ";
+				INFOPLIST_KEY_NSSiriUsageDescription = "Diese App verwendet Siri Kurzbefehle, um Ihnen schnellen Zugriff auf bestimmte Funktionen zu ermöglichen.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -655,7 +661,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ShortCutKonditionierung/Info.plist;
-				INFOPLIST_KEY_NSSiriUsageDescription = "needed ";
+				INFOPLIST_KEY_NSSiriUsageDescription = "Diese App verwendet Siri Kurzbefehle, um Ihnen schnellen Zugriff auf bestimmte Funktionen zu ermöglichen.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

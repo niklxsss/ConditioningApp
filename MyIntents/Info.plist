@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd%22%3E">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>INIntentDefinitionNamespace</key>
-    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
-    <key>NSExtension</key>
-    <dict>
-        <key>NSExtensionAttributes</key>
-        <dict>
-            <key>IntentsRestrictedWhileLocked</key>
-            <array/>
-            <key>IntentsRestrictedWhileProtectedDataUnavailable</key>
-            <array/>
-            <key>IntentsSupported</key>
-            <array>
-                <string>CatchABreathIntent</string>
-                <string>ShockingPicturesIntent</string>
-                <string>WarningByTextIntent</string>
-            </array>
-        </dict>
-        <key>NSExtensionPointIdentifier</key>
-        <string>com.apple.intents-service</string>
-        <key>NSExtensionPrincipalClass</key>
-        <string>$(PRODUCT_MODULE_NAME).MyIntents.IntentHandler</string>
-    </dict>
-    <key>NSUserActivityTypes</key>
-    <array>
-        <string>CatchABreathIntent</string>
-        <string>ShockingPicturesIntent</string>
-        <string>WarningByTextIntent</string>
-    </array>
-    <key>com.apple.developer.siri</key>
-    <true/>
+	<key>INIntentDefinitionNamespace</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>NSExtension</key>
+	<dict>
+		<key>NSExtensionAttributes</key>
+		<dict>
+			<key>IntentsRestrictedWhileLocked</key>
+			<array/>
+			<key>IntentsRestrictedWhileProtectedDataUnavailable</key>
+			<array/>
+			<key>IntentsSupported</key>
+			<array>
+				<string>CatchABreathIntent</string>
+				<string>ShockingPicturesIntent</string>
+				<string>WarningByTextIntent</string>
+			</array>
+		</dict>
+		<key>NSExtensionPointIdentifier</key>
+		<string>com.apple.intents-service</string>
+		<key>NSExtensionPrincipalClass</key>
+		<string>$(PRODUCT_MODULE_NAME).MyIntents.IntentHandler</string>
+	</dict>
+	<key>NSUserActivityTypes</key>
+	<array>
+		<string>CatchABreathIntent</string>
+		<string>ShockingPicturesIntent</string>
+		<string>WarningByTextIntent</string>
+	</array>
+	<key>com.apple.developer.siri</key>
+	<true/>
 </dict>
 </plist>

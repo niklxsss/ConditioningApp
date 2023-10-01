@@ -23,7 +23,16 @@ class IntentHandler: INExtension, CatchABreathIntentHandling, ShockingPicturesIn
             completion(response)
         } else {
             print("handle catchABreath")
-            AppState.shared.openAppUrl = intent.appURL ?? URL(string: "noURL")!
+            
+            guard let appType = AppType(rawValue: intent.selectedApp.rawValue) else {
+                        print("Error: Invalid or missing appType value")
+                        let response = CatchABreathIntentResponse(code: .failure, userActivity: nil)
+                        completion(response)
+                        return
+            }
+            print("Selected App: \(appType)")
+            AppState.shared.openAppUrl = appType.mappedURL()!
+            
             let response = CatchABreathIntentResponse(code: .continueInApp, userActivity: nil)
             completion(response)
         }
@@ -35,8 +44,17 @@ class IntentHandler: INExtension, CatchABreathIntentHandling, ShockingPicturesIn
             let response = ShockingPicturesIntentResponse(code: .success, userActivity: nil)
             completion(response)
         } else {
-            print("handle shockingPictures")
-            AppState.shared.openAppUrl = intent.appURL ?? URL(string: "noURL")!
+            print("handle ShockingPicturesIntent")
+            
+            guard let appType = AppType(rawValue: intent.selectedApp.rawValue) else {
+                        print("Error: Invalid or missing appType value")
+                        let response = ShockingPicturesIntentResponse(code: .failure, userActivity: nil)
+                        completion(response)
+                        return
+            }
+            print("Selected App: \(appType)")
+            AppState.shared.openAppUrl = appType.mappedURL()!
+            
             let response = ShockingPicturesIntentResponse(code: .continueInApp, userActivity: nil)
             completion(response)
         }
@@ -48,7 +66,16 @@ class IntentHandler: INExtension, CatchABreathIntentHandling, ShockingPicturesIn
             completion(response)
         } else {
             print("handle WarningByText")
-            AppState.shared.openAppUrl = intent.appURL ?? URL(string: "noURL")!
+            
+            guard let appType = AppType(rawValue: intent.selectedApp.rawValue) else {
+                        print("Error: Invalid or missing appType value")
+                        let response = WarningByTextIntentResponse(code: .failure, userActivity: nil)
+                        completion(response)
+                        return
+            }
+            print("Selected App: \(appType)")
+            AppState.shared.openAppUrl = appType.mappedURL()!
+            
             let response = WarningByTextIntentResponse(code: .continueInApp, userActivity: nil)
             completion(response)
         }

@@ -3,7 +3,91 @@
 <plist version="1.0">
 <dict>
 	<key>INEnums</key>
-	<array/>
+	<array>
+		<dict>
+			<key>INEnumDisplayName</key>
+			<string>Enum</string>
+			<key>INEnumDisplayNameID</key>
+			<string>elunVD</string>
+			<key>INEnumGeneratesHeader</key>
+			<true/>
+			<key>INEnumName</key>
+			<string>Enum</string>
+			<key>INEnumType</key>
+			<string>Regular</string>
+			<key>INEnumValues</key>
+			<array>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>unkown</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>qbopJz</string>
+					<key>INEnumValueName</key>
+					<string>unknown</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>instagram</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>U6Wkfw</string>
+					<key>INEnumValueIndex</key>
+					<integer>1</integer>
+					<key>INEnumValueName</key>
+					<string>instagram</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>safari</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>VMaamZ</string>
+					<key>INEnumValueIndex</key>
+					<integer>2</integer>
+					<key>INEnumValueName</key>
+					<string>safari</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>imessage</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>gJJT3t</string>
+					<key>INEnumValueIndex</key>
+					<integer>3</integer>
+					<key>INEnumValueName</key>
+					<string>imessage</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>snapchat</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>bBskXR</string>
+					<key>INEnumValueIndex</key>
+					<integer>4</integer>
+					<key>INEnumValueName</key>
+					<string>snapchat</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>tiktok</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>REnzHB</string>
+					<key>INEnumValueIndex</key>
+					<integer>5</integer>
+					<key>INEnumValueName</key>
+					<string>tiktok</string>
+				</dict>
+				<dict>
+					<key>INEnumValueDisplayName</key>
+					<string>youtube</string>
+					<key>INEnumValueDisplayNameID</key>
+					<string>PTyJ3n</string>
+					<key>INEnumValueIndex</key>
+					<integer>6</integer>
+					<key>INEnumValueName</key>
+					<string>youtube</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
 	<key>INIntentDefinitionModelVersion</key>
 	<string>1.2</string>
 	<key>INIntentDefinitionNamespace</key>
@@ -25,16 +109,20 @@
 			<string>ebr7K9</string>
 			<key>INIntentIneligibleForSuggestions</key>
 			<true/>
+			<key>INIntentInput</key>
+			<string>selectedApp</string>
+			<key>INIntentKeyParameter</key>
+			<string>selectedApp</string>
 			<key>INIntentLastParameterTag</key>
-			<integer>2</integer>
+			<integer>8</integer>
 			<key>INIntentManagedParameterCombinations</key>
 			<dict>
-				<key>appURL</key>
+				<key>selectedApp</key>
 				<dict>
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
-					<string>Zeigt den CatchABreath-Shortcut vor ${appURL} an.</string>
+					<string>Zeigt den CatchABreath-Shortcut vor ${selectedApp}  an.</string>
 					<key>INIntentParameterCombinationTitleID</key>
 					<string>97Vnhi</string>
 					<key>INIntentParameterCombinationUpdatesLinked</key>
@@ -49,37 +137,26 @@
 					<key>INIntentParameterConfigurable</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>App URL</string>
+					<string>Selected App</string>
 					<key>INIntentParameterDisplayNameID</key>
-					<string>CjVh8W</string>
+					<string>DhPM01</string>
 					<key>INIntentParameterDisplayPriority</key>
 					<integer>1</integer>
+					<key>INIntentParameterEnumType</key>
+					<string>Enum</string>
+					<key>INIntentParameterEnumTypeNamespace</key>
+					<string>kYo51D</string>
 					<key>INIntentParameterMetadata</key>
 					<dict>
 						<key>INIntentParameterMetadataDefaultValue</key>
-						<string>noURL</string>
+						<string>instagram</string>
 					</dict>
 					<key>INIntentParameterName</key>
-					<string>appURL</string>
-					<key>INIntentParameterPromptDialogs</key>
-					<array>
-						<dict>
-							<key>INIntentParameterPromptDialogCustom</key>
-							<true/>
-							<key>INIntentParameterPromptDialogType</key>
-							<string>Configuration</string>
-						</dict>
-						<dict>
-							<key>INIntentParameterPromptDialogCustom</key>
-							<true/>
-							<key>INIntentParameterPromptDialogType</key>
-							<string>Primary</string>
-						</dict>
-					</array>
+					<string>selectedApp</string>
 					<key>INIntentParameterTag</key>
-					<integer>2</integer>
+					<integer>6</integer>
 					<key>INIntentParameterType</key>
-					<string>URL</string>
+					<string>Integer</string>
 				</dict>
 			</array>
 			<key>INIntentResponse</key>
@@ -116,16 +193,20 @@
 			<string>lxA4fq</string>
 			<key>INIntentIneligibleForSuggestions</key>
 			<true/>
+			<key>INIntentInput</key>
+			<string>selectedApp</string>
+			<key>INIntentKeyParameter</key>
+			<string>selectedApp</string>
 			<key>INIntentLastParameterTag</key>
-			<integer>3</integer>
+			<integer>5</integer>
 			<key>INIntentManagedParameterCombinations</key>
 			<dict>
-				<key>appURL</key>
+				<key>selectedApp</key>
 				<dict>
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
-					<string>Zeigt den ShockingPictures-Shortcut vor ${appURL} an.</string>
+					<string>Zeigt den ShockingPictures-Shortcut vor ${selectedApp}  an.</string>
 					<key>INIntentParameterCombinationTitleID</key>
 					<string>xhVz7w</string>
 					<key>INIntentParameterCombinationUpdatesLinked</key>
@@ -140,18 +221,22 @@
 					<key>INIntentParameterConfigurable</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>App URL</string>
+					<string>Selected App</string>
 					<key>INIntentParameterDisplayNameID</key>
 					<string>xMoHWn</string>
 					<key>INIntentParameterDisplayPriority</key>
 					<integer>1</integer>
+					<key>INIntentParameterEnumType</key>
+					<string>Enum</string>
+					<key>INIntentParameterEnumTypeNamespace</key>
+					<string>kYo51D</string>
 					<key>INIntentParameterMetadata</key>
 					<dict>
 						<key>INIntentParameterMetadataDefaultValue</key>
-						<string>noURL</string>
+						<string>instagram</string>
 					</dict>
 					<key>INIntentParameterName</key>
-					<string>appURL</string>
+					<string>selectedApp</string>
 					<key>INIntentParameterPromptDialogs</key>
 					<array>
 						<dict>
@@ -168,9 +253,9 @@
 						</dict>
 					</array>
 					<key>INIntentParameterTag</key>
-					<integer>3</integer>
+					<integer>4</integer>
 					<key>INIntentParameterType</key>
-					<string>URL</string>
+					<string>Integer</string>
 				</dict>
 			</array>
 			<key>INIntentResponse</key>
@@ -208,19 +293,19 @@
 			<key>INIntentIneligibleForSuggestions</key>
 			<true/>
 			<key>INIntentInput</key>
-			<string>appURL</string>
+			<string>selectedApp</string>
 			<key>INIntentKeyParameter</key>
-			<string>appURL</string>
+			<string>selectedApp</string>
 			<key>INIntentLastParameterTag</key>
-			<integer>2</integer>
+			<integer>4</integer>
 			<key>INIntentManagedParameterCombinations</key>
 			<dict>
-				<key>appURL</key>
+				<key>selectedApp</key>
 				<dict>
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
-					<string>Zeigt den WarningByText-Shortcut vor ${appURL} an.</string>
+					<string>Zeigt den WarningByText-Shortcut vor ${selectedApp} an.</string>
 					<key>INIntentParameterCombinationTitleID</key>
 					<string>vL2O74</string>
 					<key>INIntentParameterCombinationUpdatesLinked</key>
@@ -235,18 +320,22 @@
 					<key>INIntentParameterConfigurable</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>App URL</string>
+					<string>Selected App</string>
 					<key>INIntentParameterDisplayNameID</key>
 					<string>k2fOex</string>
 					<key>INIntentParameterDisplayPriority</key>
 					<integer>1</integer>
+					<key>INIntentParameterEnumType</key>
+					<string>Enum</string>
+					<key>INIntentParameterEnumTypeNamespace</key>
+					<string>kYo51D</string>
 					<key>INIntentParameterMetadata</key>
 					<dict>
 						<key>INIntentParameterMetadataDefaultValue</key>
-						<string>noURL</string>
+						<string>instagram</string>
 					</dict>
 					<key>INIntentParameterName</key>
-					<string>appURL</string>
+					<string>selectedApp</string>
 					<key>INIntentParameterPromptDialogs</key>
 					<array>
 						<dict>
@@ -261,11 +350,31 @@
 							<key>INIntentParameterPromptDialogType</key>
 							<string>Primary</string>
 						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>There are ${count} options matching ‘${selectedApp}’.</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>BYK8Fn</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>DisambiguationIntroduction</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogFormatString</key>
+							<string>Just to confirm, you wanted ‘${selectedApp}’?</string>
+							<key>INIntentParameterPromptDialogFormatStringID</key>
+							<string>4TSyx9</string>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Confirmation</string>
+						</dict>
 					</array>
 					<key>INIntentParameterTag</key>
-					<integer>2</integer>
+					<integer>4</integer>
 					<key>INIntentParameterType</key>
-					<string>URL</string>
+					<string>Integer</string>
 				</dict>
 			</array>
 			<key>INIntentResponse</key>

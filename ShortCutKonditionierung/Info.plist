@@ -1,37 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd%22%3E">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-        <key>CFBundleURLTypes</key>
-        <array>
-            <dict>
-                <key>CFBundleURLSchemes</key>
-                <array>
-                    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
-                </array>
-            </dict>
-        </array>
-        <key>INIntentDefinitionNamespace</key>
-        <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
-        <key>INIntentsSupported</key>
-        <array>
-            <string>CatchABreathIntent</string>
-            <string>ShockingPicturesIntent</string>
-            <string>WarningByTextIntent</string>
-        </array>
-        <key>MinimumOSVersion</key>
-        <string>$(IPHONEOS_DEPLOYMENT_TARGET)</string>
-        <key>NSUserActivityTypes</key>
-        <array>
-            <string>CatchABreathIntent</string>
-            <string>ShockingPicturesIntent</string>
-            <string>WarningByTextIntent</string>
-        </array>
-        <key>UIBackgroundModes</key>
-        <array>
-            <string>fetch</string>
-        </array>
-        <key>NSSiriUsageDescription</key>
-        <string>Diese App verwendet Siri Kurzbefehle, um Ihnen schnellen Zugriff auf bestimmte Funktionen zu ermöglichen.</string>
-    </dict>
+<dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+			</array>
+		</dict>
+	</array>
+	<key>INIntentDefinitionNamespace</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>INIntentsSupported</key>
+	<array>
+		<string>CatchABreathIntent</string>
+		<string>ShockingPicturesIntent</string>
+		<string>WarningByTextIntent</string>
+	</array>
+	<key>MinimumOSVersion</key>
+	<string>$(IPHONEOS_DEPLOYMENT_TARGET)</string>
+	<key>NSUserActivityTypes</key>
+	<array>
+		<string>CatchABreathIntent</string>
+		<string>ShockingPicturesIntent</string>
+		<string>WarningByTextIntent</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+	</array>
+</dict>
 </plist>
