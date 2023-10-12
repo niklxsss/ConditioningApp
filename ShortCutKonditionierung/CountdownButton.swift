@@ -3,7 +3,8 @@ import SwiftUI
 struct CountdownButton: View {
     
     var timerDuration: Int
-    var originalAppURL: URL
+    var appURL: URL
+    var appName: String
     
     @State private var buttonEnabled = false
     @State private var timeRemaining: Int
@@ -16,31 +17,32 @@ struct CountdownButton: View {
     let utils = Utils()
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
-    init(originalAppURL: URL, timerDuration: Int) {
-        self.originalAppURL = originalAppURL
+    init(appInfo: AppInfo, timerDuration: Int) {
+        self.appURL = appInfo.url
         self.timerDuration = timerDuration
+        self.appName = appInfo.name
         self._timeRemaining = State(initialValue: timerDuration)
     }
 
     var body: some View {
         Button(action: {
-            if utils.urlStringToAlphabeticString(url: originalAppURL) != "noURL" {
+            
                 if timerCompleted && buttonEnabled {
                     self.appState.lastIntentExecution = Date()
                 }
                 externalAppOpened = true
-                UIApplication.shared.open(originalAppURL, options: [:], completionHandler: nil)
-            }
+                UIApplication.shared.open(appURL, options: [:], completionHandler: nil)
+            
             
         }) {
-            Text("open \(utils.urlStringToAlphabeticString(url: originalAppURL)) in \(timeRemaining)")
+            Text("open \(appName) in \(timeRemaining)")
                 .frame(width: 180, height: 55)
                 .background(buttonEnabled || timerCompleted ? Color.blue : Color.gray)
                 .foregroundColor(.white)
                 .cornerRadius(10)
         }
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.didEnterBackgroundNotification)) { _ in
-            if utils.urlStringToAlphabeticString(url: originalAppURL) != "noURL" && externalAppOpened {
+            if externalAppOpened {
                 utils.isAppInForeground = false
             }
         }

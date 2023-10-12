@@ -40,6 +40,9 @@
 		F4ED7A482A0124E6004B2FF2 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4CA3D7829FFD5FB00A75A4C /* Intents.framework */; };
 		F4F94A5F2AC99310005C47E1 /* AppType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F94A5E2AC99310005C47E1 /* AppType.swift */; };
 		F4F94A602AC99B91005C47E1 /* AppType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F94A5E2AC99310005C47E1 /* AppType.swift */; };
+		F4F94A622AD062F1005C47E1 /* ActivityMonitoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F94A612AD062F0005C47E1 /* ActivityMonitoring.swift */; };
+		F4F94A642AD816CD005C47E1 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F94A632AD816CC005C47E1 /* AppInfo.swift */; };
+		F4F94A652AD816CD005C47E1 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F94A632AD816CC005C47E1 /* AppInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +117,8 @@
 		F4ED7A472A0124E6004B2FF2 /* MyIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4ED7A4C2A0124E6004B2FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4F94A5E2AC99310005C47E1 /* AppType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppType.swift; sourceTree = "<group>"; };
+		F4F94A612AD062F0005C47E1 /* ActivityMonitoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMonitoring.swift; sourceTree = "<group>"; };
+		F4F94A632AD816CC005C47E1 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +182,7 @@
 		F4B9B35429EFF52C002E34FD /* ShortCutKonditionierung */ = {
 			isa = PBXGroup;
 			children = (
+				F4F94A612AD062F0005C47E1 /* ActivityMonitoring.swift */,
 				F49666EE29EFF6D800D8E433 /* MyApp.swift */,
 				F4ED7A3A2A00FB57004B2FF2 /* AppDelegate.swift */,
 				F4ED7A372A00F2C0004B2FF2 /* AppState.swift */,
@@ -247,6 +253,7 @@
 				F4B8C9A029FEFDC7005995AA /* Intents.intentdefinition */,
 				F4ED7A1629FFFEFF004B2FF2 /* IntentHandler.swift */,
 				F4F94A5E2AC99310005C47E1 /* AppType.swift */,
+				F4F94A632AD816CC005C47E1 /* AppInfo.swift */,
 				F4ED7A4C2A0124E6004B2FF2 /* Info.plist */,
 				F4E3378F2A459D0600568CEE /* MyIntents.entitlements */,
 			);
@@ -417,6 +424,7 @@
 				F424B9382A0D0AE300E049BE /* Intents.intentdefinition in Sources */,
 				F498477D29F0184100903C4F /* CustomNavBarButton.swift in Sources */,
 				F49666F329EFF6F700D8E433 /* ShortcutView.swift in Sources */,
+				F4F94A642AD816CD005C47E1 /* AppInfo.swift in Sources */,
 				F4B8A5FD29F7D51B00AB9601 /* ContentView.swift in Sources */,
 				F4ED7A3B2A00FB57004B2FF2 /* AppDelegate.swift in Sources */,
 				F4947D722A0A892B00F72301 /* Settings.swift in Sources */,
@@ -430,6 +438,7 @@
 				F49666EF29EFF6D800D8E433 /* MyApp.swift in Sources */,
 				F4ED7A382A00F2C0004B2FF2 /* AppState.swift in Sources */,
 				F4947D702A0A79F400F72301 /* CountdownButton.swift in Sources */,
+				F4F94A622AD062F1005C47E1 /* ActivityMonitoring.swift in Sources */,
 				F49666F129EFF6EC00D8E433 /* NavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,6 +474,7 @@
 				F4947D6C2A0A404200F72301 /* IntentHandler.swift in Sources */,
 				F46431412A139F6E00D7DE89 /* Utils.swift in Sources */,
 				F4D23E042A026FE800670EA1 /* AppState.swift in Sources */,
+				F4F94A652AD816CD005C47E1 /* AppInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

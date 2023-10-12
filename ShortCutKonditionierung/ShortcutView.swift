@@ -34,7 +34,8 @@ struct ShortcutView: View {
                 HStack{
                     Spacer()
                     
-                    CountdownButton(originalAppURL: appState.openAppUrl, timerDuration: settings.timerDuration)
+                    
+                    CountdownButton(appInfo: appState.appInfo, timerDuration: settings.timerDuration)
                     
                     Spacer()
                     
