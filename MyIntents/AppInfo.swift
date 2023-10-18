@@ -11,7 +11,7 @@ public class AppInfo {
             let name = appType.mappedName(),
             let url = appType.mappedURL(),
             let bundleId = appType.mappedBundelID() else {
-            print("Error: Konnte AppInfo nicht erstellen, da einige Werte fehlen.")
+            print("Error: Konnte AppInfo nicht erstellen, da Werte fehlen.")
             return nil
             }
 

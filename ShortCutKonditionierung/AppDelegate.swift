@@ -1,5 +1,6 @@
 import SwiftUI
 import Intents
+import FamilyControls
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -67,6 +68,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("App is authorized to send notification")
             }
         }
+        
+        /*AuthorizationCenter.shared.requestAuthorization { result in
+            switch result {
+            case .success():
+                print("App is authorized to add FamilyControls.")
+            case .failure():
+                print("App is not authorized to add FamilyControls.")
+            }
+        }*/
         
     }
     

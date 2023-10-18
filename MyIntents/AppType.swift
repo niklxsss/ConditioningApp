@@ -32,7 +32,7 @@ enum AppType: Int {
         case .unknown:
             return "unkown"
         case .imessage:
-            return "com.apple.MobileSMS"
+            return "com.apple.iChat"
         case .instagram:
             return "com.apple.MobileSMS"
         case .tiktok:
@@ -42,7 +42,7 @@ enum AppType: Int {
         case .youtube:
             return "com.apple.MobileSMS"
         case .safari:
-            return "com.apple.MobileSMS"
+            return "com.apple.mobilesafari"
         }
     }
     

@@ -3,8 +3,7 @@ import SwiftUI
 struct CountdownButton: View {
     
     var timerDuration: Int
-    var appURL: URL
-    var appName: String
+    var appInfo: AppInfo
     
     @State private var buttonEnabled = false
     @State private var timeRemaining: Int
@@ -18,9 +17,8 @@ struct CountdownButton: View {
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     init(appInfo: AppInfo, timerDuration: Int) {
-        self.appURL = appInfo.url
+        self.appInfo = appInfo
         self.timerDuration = timerDuration
-        self.appName = appInfo.name
         self._timeRemaining = State(initialValue: timerDuration)
     }
 
@@ -31,11 +29,12 @@ struct CountdownButton: View {
                     self.appState.lastIntentExecution = Date()
                 }
                 externalAppOpened = true
-                UIApplication.shared.open(appURL, options: [:], completionHandler: nil)
+                UIApplication.shared.open(appInfo.url, options: [:], completionHandler: nil)
+                scheduleDeviceActivityEvent(appInfo: appInfo)
             
             
         }) {
-            Text("open \(appName) in \(timeRemaining)")
+            Text("open \(appInfo.name) in \(timeRemaining)")
                 .frame(width: 180, height: 55)
                 .background(buttonEnabled || timerCompleted ? Color.blue : Color.gray)
                 .foregroundColor(.white)

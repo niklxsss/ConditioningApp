@@ -30,6 +30,8 @@
 		<string>CatchABreathIntent</string>
 		<string>ShockingPicturesIntent</string>
 	</array>
+	<key>com.apple.developer.family-controls</key>
+	<true/>
 	<key>com.apple.developer.siri</key>
 	<true/>
 </dict>
