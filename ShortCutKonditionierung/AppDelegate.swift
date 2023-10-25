@@ -69,14 +69,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
-        /*AuthorizationCenter.shared.requestAuthorization { result in
-            switch result {
-            case .success():
-                print("App is authorized to add FamilyControls.")
-            case .failure():
-                print("App is not authorized to add FamilyControls.")
+        
+        let ac = AuthorizationCenter.shared
+
+        Task {
+            do {
+                try await ac.requestAuthorization(for: .individual)
             }
-        }*/
+            catch {
+                print("error familycontrol Aut")
+            }
+        }
         
     }
     

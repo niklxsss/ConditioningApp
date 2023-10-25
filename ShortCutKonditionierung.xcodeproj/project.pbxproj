@@ -35,6 +35,7 @@
 		F4B9B37329EFF52E002E34FD /* ShortCutKonditionierungUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B9B37229EFF52E002E34FD /* ShortCutKonditionierungUITestsLaunchTests.swift */; };
 		F4BD33DA2A1AA1D4007A9839 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD33D92A1AA1D4007A9839 /* ChartView.swift */; };
 		F4D23E042A026FE800670EA1 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED7A372A00F2C0004B2FF2 /* AppState.swift */; };
+		F4E3EAF92AE95E240099C80B /* ScreenTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E3EAF82AE95E240099C80B /* ScreenTimeModel.swift */; };
 		F4ED7A382A00F2C0004B2FF2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED7A372A00F2C0004B2FF2 /* AppState.swift */; };
 		F4ED7A3B2A00FB57004B2FF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ED7A3A2A00FB57004B2FF2 /* AppDelegate.swift */; };
 		F4ED7A482A0124E6004B2FF2 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4CA3D7829FFD5FB00A75A4C /* Intents.framework */; };
@@ -111,6 +112,7 @@
 		F4E3378C2A45941E00568CEE /* ShortCutKonditionierungRelease.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = ShortCutKonditionierungRelease.entitlements; sourceTree = "<group>"; };
 		F4E3378E2A4597A800568CEE /* ShortCutKonditionierung.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = ShortCutKonditionierung.entitlements; sourceTree = "<group>"; };
 		F4E3378F2A459D0600568CEE /* MyIntents.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = MyIntents.entitlements; sourceTree = "<group>"; };
+		F4E3EAF82AE95E240099C80B /* ScreenTimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeModel.swift; sourceTree = "<group>"; };
 		F4ED7A1629FFFEFF004B2FF2 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		F4ED7A372A00F2C0004B2FF2 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		F4ED7A3A2A00FB57004B2FF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 		F4B9B35429EFF52C002E34FD /* ShortCutKonditionierung */ = {
 			isa = PBXGroup;
 			children = (
+				F4E3EAF82AE95E240099C80B /* ScreenTimeModel.swift */,
 				F4F94A612AD062F0005C47E1 /* ActivityMonitoring.swift */,
 				F49666EE29EFF6D800D8E433 /* MyApp.swift */,
 				F4ED7A3A2A00FB57004B2FF2 /* AppDelegate.swift */,
@@ -437,6 +440,7 @@
 				F498478129F01B5F00903C4F /* SettingsView.swift in Sources */,
 				F49666EF29EFF6D800D8E433 /* MyApp.swift in Sources */,
 				F4ED7A382A00F2C0004B2FF2 /* AppState.swift in Sources */,
+				F4E3EAF92AE95E240099C80B /* ScreenTimeModel.swift in Sources */,
 				F4947D702A0A79F400F72301 /* CountdownButton.swift in Sources */,
 				F4F94A622AD062F1005C47E1 /* ActivityMonitoring.swift in Sources */,
 				F49666F129EFF6EC00D8E433 /* NavigationBar.swift in Sources */,

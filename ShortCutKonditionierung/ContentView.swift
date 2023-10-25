@@ -1,11 +1,14 @@
 import SwiftUI
+import SwiftUI
+import FamilyControls
+import DeviceActivity
 
 
 struct ContentView: View {
     
     @EnvironmentObject private var appState: AppState
     @State private var selectedTab: Tabs = AppState().showShortcutView ? .shortcut : .home
-
+    
     var body: some View {
         if appState.showShortcutView && !appState.launchedAsShortcut{
             ShortcutView(selectedTab: $selectedTab)

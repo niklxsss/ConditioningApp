@@ -11,6 +11,8 @@ struct CountdownButton: View {
     @State private var startTime: Date?
     @State private var externalAppOpened = false
     
+    @StateObject var screenTimeModel = ScreenTimeModel()
+    
     @EnvironmentObject private var appState: AppState
     
     let utils = Utils()
@@ -30,7 +32,8 @@ struct CountdownButton: View {
                 }
                 externalAppOpened = true
                 UIApplication.shared.open(appInfo.url, options: [:], completionHandler: nil)
-                scheduleDeviceActivityEvent(appInfo: appInfo)
+                //scheduleDeviceActivityEvent(appInfo: appInfo)
+                screenTimeModel.startMonitoring()
             
             
         }) {
